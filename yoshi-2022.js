@@ -219,7 +219,18 @@
 
 
 		/*-------------------script-section-4----------------------*/
-
+			
+			document.getElementById("RCpipe").addEventListener('mouseover', function() {
+			document.getElementById("yoshiH").style.transform = "translate(0px, -300px)";
+			});
+			
+			document.getElementById("RCpipe").addEventListener('mouseout', function() {
+			document.getElementById("yoshiH").style.transform = "translate(0px, 300px)";
+			});
+		  
+			document.getElementById("slide4-1").addEventListener('mouseover', function() {
+			document.getElementById("RCpipe").style.opacity = "1";
+			});		  
 
 		/*-------------------script-section-5----------------------*/
 
