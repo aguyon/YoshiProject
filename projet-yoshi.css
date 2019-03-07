@@ -52,7 +52,7 @@ html.fp-enabled,
     position: absolute;
     z-index: 4;
     top: 50%;
-    cursor: pointer;
+    cursor: url("media/cursor.png"); pointer;
     width: 0;
     height: 0;
     border-style: solid;
@@ -282,7 +282,7 @@ body
     font-weight: 500;
     font-size: 1.3em;
     border-width: 0.2vh;
-    max-width: 37.666667%;
+    max-width: 30.666667%;
     background: url("media/bg-noir.png");
     border-radius: 1.25rem;
     border-style: solid;
@@ -297,10 +297,10 @@ body
 #ktext
 {
     display: none;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 600;
+    margin-left: 3vh;
 }
-
 .kfooter
 {
     background: url("https://mario.nintendo.com/assets/img/patterns/leaves.png") repeat-x;
@@ -351,6 +351,14 @@ button:focus
     box-shadow:none;
 }
 
+@media screen and (min-width: 576px) and (max-width: 1100px)
+{
+    .cont button
+    {
+        max-width: 50.666667%;
+    }
+}
+
 
 /*<----------------section-2---------------->*/
 
@@ -363,10 +371,10 @@ button:focus
 .pink { background-color: #F974B4; }
 
 .aborder {
-	display: block;
-	width: 3em;
-	height: 3em;
-	border: 2px solid rgba(41, 40, 40, 0.5) !important;
+    display: block;
+    width: 3em;
+    height: 3em;
+    border: 2px solid rgba(41, 40, 40, 0.5) !important;
 }
 
 .aslide2-1 {
@@ -381,12 +389,12 @@ button:focus
 }
 
 .awrapper {
-	margin: 0 auto;
-	width: 250px;
-	height: 200px;
-	top: 50px;
-	position: relative;
-	perspective: 1000px;
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    top: 50px;
+    position: relative;
+    perspective: 1000px;
 }
 
 .abg-flower {
@@ -410,30 +418,30 @@ button:focus
 }
 
 .acarousel {
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
     transition: transform 1s;
 }
 
 .acarousel div {
-	transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .aitem {
-	top: 60px;
-	display: block;
-	position: absolute;
-	background: #000;
-	width: 250px;
-	height: 200px;
-	line-height: 200px;
-	font-size: 5em;
-	text-align: center;
-	color: #FFF;
-	border-radius: 150px;
-	transition: transform 1s;
+    top: 60px;
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 250px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    border-radius: 150px;
+    transition: transform 1s;
 }
 
 .aa { transform: rotateY(0deg) translateZ(250px); }
@@ -449,123 +457,124 @@ button:focus
 .ff { transform: rotateY(300deg) translateZ(250px) rotateY(-300deg); }
 
 .acard {
-	width: 100%;
-	height: 320px;
-	text-align: center;
-	color: white;
+    width: 100%;
+    height: 320px;
+    text-align: center;
+    color: white;
     font-style: bold;
     border-radius: 50px;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+    box-shadow: 0px 6px 2px 1px rgba(0, 0, 0, .3);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .acard .pattern-peach {
-	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-daisy.gif);
-	background-attachment: fixed;
-	position: relative;
-	width: auto;
+    background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-daisy.gif);
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
     height: 318px;
     border-radius: 50px;
 }
 
 .acard .pattern-mario {
-	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-mario.gif);
-	background-attachment: fixed;
-	position: relative;
-	width: auto;
+    background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-mario.gif);
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
     height: 318px;
     border-radius: 50px;
 }
 
 .acard .pattern-daisy {
-	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-peach.gif);
-	background-attachment: fixed;
-	position: relative;
-	width: auto;
+    background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-peach.gif);
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
     height: 318px;
     border-radius: 50px;
 }
 
 .acard .pattern-luigi {
-	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-luigi.gif);
-	background-attachment: fixed;
-	position: relative;
-	width: auto;
+    background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-luigi.gif);
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
     height: 318px;
     border-radius: 50px;
 }
 
 .acard .pattern-toad {
-	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-toad.gif);
-	background-attachment: fixed;
-	position: relative;
-	width: auto;
+    background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-toad.gif);
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
     height: 318px;
     border-radius: 50px;
 }
 
 .acard .pattern-waluigi {
-	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-waluigi.gif);
-	background-attachment: fixed;
-	position: relative;
-	width: auto;
+    background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-waluigi.gif);
+    background-attachment: fixed;
+    position: relative;
+    width: auto;
     height: 318px;
     border-radius: 50px;
 }
 
 .acard .icon-holder {
-	position: relative;
-	top: 0px;
-	display: inline-block;
-	margin-bottom: 15px;
-	padding: 10px;
-	transition: 0.3s ease-out 0.3s;
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: 0.3s ease-out 0.3s;
 }
 
 .acard .heading {
-	position: relative;
-	font-weight: 900;
-	font-size: 0.5em;
-	top: -50px;
-	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    font-weight: 900;
+    font-size: 0.5em;
+    top: -50px;
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .acard .icon-holder > img.icon {
-	width: 100px;
+    width: 100px;
 }
 
 .acard .icon-waluigi > img.icon {
-	width: 129px;
+    width: 129px;
 }
 
 .acard:hover .icon-holder {
-	top: -90px;
+    top: -90px;
 }
 
 .acard:hover .heading {
-	top: -120px;
+    top: -120px;
 }
 
 .acard .description {
-	width: 80%;
-	margin: -100px auto;
-	opacity: 0;
-	font-size: 15px;
-	line-height: 20px;
-	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	transform: scale(0);
+    width: 80%;
+    margin: -100px auto;
+    opacity: 0;
+    font-size: 15px;
+    line-height: 20px;
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(0);
 }
 
 .acard:hover .description {
-	opacity: 1;
-	transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .next, .prev {
-	position: absolute;
-	top: 235px;
-    cursor: pointer;
-    color: #F2FF00;
+    position: absolute;
+    top: 235px;
+    cursor: url("media/cursor.png"); pointer;
+    color: #fff;
     width: 120px;
     height: 120px;
     text-align: center;
@@ -578,7 +587,7 @@ button:focus
 }
 
 .next:before, .prev:before {
-    content: '';
+    content: 'media/cursor.png';
     width: 100%;
     height: 100%;
     position: absolute;
@@ -601,7 +610,7 @@ button:focus
     color: #F2FF00;
 }
 
-.next {	margin-left: 470px; }
+.next { margin-left: 470px; }
 
 .prev { margin-left: -435px; }
 
