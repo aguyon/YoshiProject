@@ -52,7 +52,7 @@ html.fp-enabled,
     position: absolute;
     z-index: 4;
     top: 50%;
-    cursor: url("media/cursor.png pointer");
+    cursor: pointer;
     width: 0;
     height: 0;
     border-style: solid;
@@ -282,7 +282,7 @@ body
     font-weight: 500;
     font-size: 1.3em;
     border-width: 0.2vh;
-    max-width: 30.666667%;
+    max-width: 37.666667%;
     background: url("media/bg-noir.png");
     border-radius: 1.25rem;
     border-style: solid;
@@ -297,9 +297,8 @@ body
 #ktext
 {
     display: none;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
-    margin-left: 3vh;
 }
 
 .kfooter
@@ -350,14 +349,6 @@ button:focus
 {
     outline:none;
     box-shadow:none;
-}
-
-@media screen and (min-width: 576px) and (max-width: 1100px)
-{
-    .cont button
-    {
-        max-width: 50.666667%;
-    }
 }
 
 
@@ -464,7 +455,6 @@ button:focus
 	color: white;
     font-style: bold;
     border-radius: 50px;
-    box-shadow: 0px 6px 2px 1px rgba(0, 0, 0, .3);
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
@@ -574,8 +564,8 @@ button:focus
 .next, .prev {
 	position: absolute;
 	top: 235px;
-    cursor: url(""); pointer;
-    color: #fff;
+    cursor: pointer;
+    color: #F2FF00;
     width: 120px;
     height: 120px;
     text-align: center;

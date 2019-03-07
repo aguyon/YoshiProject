@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Catamaran Thin'), local('Catamaran-Thin'), url(https://fonts.gstatic.com/s/catamaran/v5/o-0OIpQoyXQa2RxT7-5jhgRUQ_m87A.woff2) format('woff2');
+  unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
+}
+
+* {
+	font-family: 'Catamaran' !important;
+}
+
+body {
+  background: #0c1514;
+  color: #fff;
+}
+h1 {
+  color: #63c5bc;
+}
+
+
+#slide4-1 {
+    background-image: url("media/yoshi_island.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#RCkey {
+    animation: rotation360 6s infinite;
+    width: 10vw;
+    position: relative;
+    top: 100px; 
+}
+
+#RCpipe {
+    position: absolute;
+    bottom: 0;
+}
+
+#yoshiH {
+    width: 7vw;
+    transform: translate(0px, 400px);
+    transition-duration: 1s;    
+}
+
+
+@keyframes rotation360 {
+
+    0% {
+
+    }
+
+    20% {
+        transform: translateX(-200px) rotateZ(-180deg)
+    }
+
+    40% {
+
+        transform: rotateZ(360deg);
+
+    }
+
+    100% {
+
+        transform: rotateZ(360deg);
+
+    }
+
+}
