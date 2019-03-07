@@ -1,13 +1,4 @@
-/*!
- * fullPage 3.0.4
- * https://github.com/alvarotrigo/fullPage.js
- *
- * @license GPLv3 for open source use only
- * or Fullpage Commercial License for commercial use
- * http://alvarotrigo.com/fullPage/pricing/
- *
- * Copyright (C) 2018 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
- */
+
 html.fp-enabled,
 .fp-enabled body {
     margin: 0;
@@ -361,6 +352,8 @@ button:focus
 
 
 /*<----------------section-2---------------->*/
+
+
 .red { background-color: #DE0000; }
 .blue { background-color: #321491; }
 .green { background-color: #00B12D; }
@@ -368,29 +361,25 @@ button:focus
 .orange { background-color: #EE7A00; }
 .pink { background-color: #F974B4; }
 
-.border {
+.aborder {
 	display: block;
 	width: 3em;
 	height: 3em;
 	border: 2px solid rgba(41, 40, 40, 0.5) !important;
 }
 
-body {
-	font-family: 'Catamaran', sans-serif;
-}
-
-#slide2-1 {
+.aslide2-1 {
     background: url(https://mario.nintendo.com/assets/img/patterns/ground.png);
     width: 100%;
     height: 50px;
 }
 
-.intro-team {
+.aintro-team {
     margin-top: -375px;
     margin-bottom: 30px;
 }
 
-.wrapper {
+.awrapper {
 	margin: 0 auto;
 	width: 250px;
 	height: 200px;
@@ -399,7 +388,7 @@ body {
 	perspective: 1000px;
 }
 
-.bg-flower {
+.abg-flower {
     background: url(https://i.postimg.cc/CLfPxcFQ/flower.png) no-repeat center center;
     background-size: 63px 50px;
     position: absolute;
@@ -409,7 +398,7 @@ body {
     right: 8px;
 }
 
-.bg-brick {
+.abg-brick {
     background: url(https://i.postimg.cc/CxGcjdnC/brick.png) no-repeat center center;
     background-size: 320px 60px;
     position: absolute;
@@ -419,7 +408,7 @@ body {
     right: -30px;
 }
 
-.AGcarousel {
+.acarousel {
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -427,11 +416,11 @@ body {
     transition: transform 1s;
 }
 
-.AGcarousel div {
+.acarousel div {
 	transform-style: preserve-3d;
 }
 
-.AGitem {
+.aitem {
 	top: 60px;
 	display: block;
 	position: absolute;
@@ -446,19 +435,19 @@ body {
 	transition: transform 1s;
 }
 
-.a { transform: rotateY(0deg) translateZ(250px); }
+.aa { transform: rotateY(0deg) translateZ(250px); }
 
-.b { transform: rotateY(60deg) translateZ(250px) rotateY(-60deg); }
+.bb { transform: rotateY(60deg) translateZ(250px) rotateY(-60deg); }
 
-.c { transform: rotateY(120deg) translateZ(250px) rotateY(-120deg); }
+.cc { transform: rotateY(120deg) translateZ(250px) rotateY(-120deg); }
 
-.d { transform: rotateY(180deg) translateZ(250px) rotateY(-180deg); }
+.dd { transform: rotateY(180deg) translateZ(250px) rotateY(-180deg); }
 
-.e { transform: rotateY(240deg) translateZ(250px) rotateY(-240deg); } 
+.ee { transform: rotateY(240deg) translateZ(250px) rotateY(-240deg); } 
 
-.f { transform: rotateY(300deg) translateZ(250px) rotateY(-300deg); }
+.ff { transform: rotateY(300deg) translateZ(250px) rotateY(-300deg); }
 
-.AGcard {
+.acard {
 	width: 100%;
 	height: 320px;
 	text-align: center;
@@ -469,7 +458,7 @@ body {
 	transition: all 0.3s ease;
 }
 
-.AGcard .pattern-peach {
+.acard .pattern-peach {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-daisy.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -478,7 +467,7 @@ body {
     border-radius: 50px;
 }
 
-.AGcard .pattern-mario {
+.acard .pattern-mario {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-mario.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -487,7 +476,7 @@ body {
     border-radius: 50px;
 }
 
-.AGcard .pattern-daisy {
+.acard .pattern-daisy {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-peach.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -496,7 +485,7 @@ body {
     border-radius: 50px;
 }
 
-.AGcard .pattern-luigi {
+.acard .pattern-luigi {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-luigi.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -505,7 +494,7 @@ body {
     border-radius: 50px;
 }
 
-.AGcard .pattern-toad {
+.acard .pattern-toad {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-toad.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -514,7 +503,7 @@ body {
     border-radius: 50px;
 }
 
-.AGcard .pattern-waluigi {
+.acard .pattern-waluigi {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-waluigi.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -523,7 +512,7 @@ body {
     border-radius: 50px;
 }
 
-.AGcard .icon-holder {
+.acard .icon-holder {
 	position: relative;
 	top: 0px;
 	display: inline-block;
@@ -532,7 +521,7 @@ body {
 	transition: 0.3s ease-out 0.3s;
 }
 
-.AGcard .heading {
+.acard .heading {
 	position: relative;
 	font-weight: 900;
 	font-size: 0.5em;
@@ -540,23 +529,23 @@ body {
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.AGcard .icon-holder > img.icon {
+.acard .icon-holder > img.icon {
 	width: 100px;
 }
 
-.AGcard .icon-waluigi > img.icon {
+.acard .icon-waluigi > img.icon {
 	width: 129px;
 }
 
-.AGcard:hover .icon-holder {
+.acard:hover .icon-holder {
 	top: -90px;
 }
 
-.AGcard:hover .heading {
+.acard:hover .heading {
 	top: -120px;
 }
 
-.AGcard .description {
+.acard .description {
 	width: 80%;
 	margin: -100px auto;
 	opacity: 0;
@@ -566,7 +555,7 @@ body {
 	transform: scale(0);
 }
 
-.AGcard:hover .description {
+.acard:hover .description {
 	opacity: 1;
 	transform: scale(1);
 }
@@ -644,10 +633,10 @@ body {
 }
 
 @media screen and (max-width: 460px) {
-    .AGcarousel {
+    .acarousel {
         margin-top: -85px;
     }
-    .intro-team {
+    .aintro-team {
         margin-top: -360px;
         margin-bottom: 120px;
     }
@@ -662,10 +651,10 @@ body {
         margin-left: -140px;
         margin-top: 125px;
     }
-    .bg-brick {
+    .abg-brick {
         display: none;
     }
-    .bg-flower {
+    .abg-flower {
         display: none;
     }
     .equipe-campagne {
