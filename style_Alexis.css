@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900%27');
+
+.red { background-color: #DE0000; }
+.blue { background-color: #321491; }
+.green { background-color: #00B12D; }
+.violet { background-color: #660089; }
+.orange { background-color: #EE7A00; }
+.pink { background-color: #F974B4; }
+
+.border {
+	display: block;
+	width: 3em;
+	height: 3em;
+	border: 2px solid rgba(41, 40, 40, 0.5) !important;
+}
+
+body {
+	font-family: 'Catamaran', sans-serif;
+}
+
+#slide2-1 {
+    background: url(https://mario.nintendo.com/assets/img/patterns/ground.png);
+    width: 100%;
+    height: 675px;
+}
+
+.intro-team {
+    margin-bottom: 30px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 250px;
+	height: 200px;
+	top: 50px;
+	position: relative;
+	perspective: 1000px;
+}
+
+.bg-flower {
+    background: url(https://i.postimg.cc/CLfPxcFQ/flower.png) no-repeat center center;
+    background-size: 63px 50px;
+    position: absolute;
+    width: 304px;
+    height: 50px;
+    top: 22px;
+    right: 0px;
+}
+
+.bg-brick {
+    background: url(https://i.postimg.cc/CxGcjdnC/brick.png) no-repeat center center;
+    background-size: 320px 60px;
+    position: absolute;
+    width: 300px;
+    height: 173px;
+    top: 14px;
+    right: 0px;
+}
+
+.carousel {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.carousel div {
+	transform-style: preserve-3d;
+}
+
+.item {
+	display: block;
+	position: absolute;
+	background: #000;
+	width: 250px;
+	height: 200px;
+	line-height: 200px;
+	font-size: 5em;
+	text-align: center;
+	color: #FFF;
+	border-radius: 150px;
+	transition: transform 1s;
+}
+
+.a { transform: rotateY(0deg) translateZ(250px); }
+
+.b { transform: rotateY(60deg) translateZ(250px) rotateY(-60deg); }
+
+.c { transform: rotateY(120deg) translateZ(250px) rotateY(-120deg); }
+
+.d { transform: rotateY(180deg) translateZ(250px) rotateY(-180deg); }
+
+.e { transform: rotateY(240deg) translateZ(250px) rotateY(-240deg); } 
+
+.f { transform: rotateY(300deg) translateZ(250px) rotateY(-300deg); }
+
+.card {
+	width: 100%;
+	height: 320px;
+	text-align: center;
+	color: white;
+    font-style: bold;
+    border-radius: 50px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.card .pattern-peach {
+	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-daisy.gif);
+	background-attachment: fixed;
+	position: relative;
+	width: auto;
+    height: 318px;
+    border-radius: 50px;
+}
+
+.card .pattern-mario {
+	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-mario.gif);
+	background-attachment: fixed;
+	position: relative;
+	width: auto;
+    height: 318px;
+    border-radius: 50px;
+}
+
+.card .pattern-daisy {
+	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-peach.gif);
+	background-attachment: fixed;
+	position: relative;
+	width: auto;
+    height: 318px;
+    border-radius: 50px;
+}
+
+.card .pattern-luigi {
+	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-luigi.gif);
+	background-attachment: fixed;
+	position: relative;
+	width: auto;
+    height: 318px;
+    border-radius: 50px;
+}
+
+.card .pattern-toad {
+	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-toad.gif);
+	background-attachment: fixed;
+	position: relative;
+	width: auto;
+    height: 318px;
+    border-radius: 50px;
+}
+
+.card .pattern-waluigi {
+	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-waluigi.gif);
+	background-attachment: fixed;
+	position: relative;
+	width: auto;
+    height: 318px;
+    border-radius: 50px;
+}
+
+.card .icon-holder {
+	position: relative;
+	top: 0px;
+	display: inline-block;
+	margin-bottom: 15px;
+	padding: 10px;
+	transition: 0.3s ease-out 0.3s;
+}
+
+.card .heading {
+	position: relative;
+	font-weight: 900;
+	font-size: 0.5em;
+	top: -50px;
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.card .icon-holder > img.icon {
+	width: 100px;
+}
+
+.card .icon-waluigi > img.icon {
+	width: 129px;
+}
+
+.card:hover .icon-holder {
+	top: -90px;
+}
+
+.card:hover .heading {
+	top: -120px;
+}
+
+.card .description {
+	width: 80%;
+	margin: -100px auto;
+	opacity: 0;
+	font-size: 15px;
+	line-height: 20px;
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transform: scale(0);
+}
+
+.card:hover .description {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.next, .prev {
+	position: absolute;
+	top: 170px;
+    cursor: pointer;
+	color: #F2FF00;
+	text-align: center;
+    width: 120px;
+    height: 120px;
+    padding-top: 20px;
+    background: #FF930D;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+                -1px 2px 20px rgba(255, 255, 255, 0.6) inset;   
+}
+
+.next:before, .prev:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 17px;
+    background: #FF930D;
+    border-radius: 50%;
+    transform: scale(0.5);
+    transition: .5s ease-in-out;
+    z-index: -1;    
+}
+
+.next:hover:before, .prev:hover:before {
+    transform: scale(1);
+}
+
+.next:hover, .prev:hover {
+    color: #F2FF00;
+}
+
+.next {	margin-left: 470px; }
+.prev { margin-left: -500px; }
+
+.pattern-leaves {
+    background: url(https://mario.nintendo.com/assets/img/patterns/leaves.png) repeat-X;
+    width: 100%;
+    height: 13vh;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.pattern-leaves-3d {
+    background: url(https://i.postimg.cc/V6VgYC2w/leaves.png) repeat-X;
+    width: 100%;
+    height: 16vh;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.equipe-campagne {
+    position: absolute;
+    bottom: 0;
+}
+
+.equipe-campagne img{
+    width: 90%;
+}
