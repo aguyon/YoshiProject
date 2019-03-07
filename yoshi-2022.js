@@ -1,6 +1,6 @@
 
 		var myFullpage = new fullpage('#fullpage', {
-			anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+			anchors: ['yoshi2022', 'equipe', 'programme', 'quiz', 'boutique'],
 			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B'],
 			navigation: false,
 			recordHistory: false,

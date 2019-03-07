@@ -1,0 +1,182 @@
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section,
+summary, hgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #37302a;
+  background: #2AA50D;
+  min-height: 2000px;
+}
+
+.nc-fixed {
+    position: fixed;
+    z-index: 9000;
+}
+
+.nc-fond {
+    width: 100%;
+    height: 140px;
+}
+@media screen and (min-width: 576px) {
+  .nc-fond {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    }
+}
+
+.nc-nav-collapse,
+.nc-nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Catamaran', arial, helvetica;
+  font-weight: 700;
+  font-size: 1em;
+  float: right;
+}
+
+.nc-nav-collapse,
+.nc-nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+  width: 100%;
+  float: right;
+}
+
+.nc-nav-collapse li {
+  float: right;
+  width: 100%;
+  display: block;
+}
+@media screen and (min-width: 576px) {
+  .nc-nav-collapse li {
+    width: 25%;
+    *width: 24.9%; /* IE7 Hack */
+    _width: 19%; /* IE6 Hack */
+  }
+}
+
+.nc-nav-collapse a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid white;
+  padding: 0.7em 1em;
+  float: right;
+}
+@media screen and (min-width: 576px) {
+  .nc-nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: right;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+}
+
+.nc-js .nc-nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: visible;
+  zoom: 1;
+}
+@media screen and (min-width: 576px) {
+  .nc-js .nc-nav-collapse {
+    position: relative;
+  }
+}
+
+.nc-nav-collapse.opened {
+  max-height: 9999px;
+}
+@media screen and (min-width: 576px) {
+  .nc-js .nc-nav-collapse.closed {
+    max-height: none;
+  }
+}
+
+.nc-nav-toggle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+}
+@media screen and (min-width: 576px) {
+  .nc-nav-toggle {
+    display: none;
+  }
+}
+
+.nc-nav-toggle:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-right: 24px;
+  background: rgba(0, 0, 0, 0.1);
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 48px;
+  text-transform: none;
+  content: "≡";
+  text-align: right;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+}
+
+.nc-nav-toggle.active::before {
+  font-size: 48px;
+  padding-right: 24px;
+  content:"x";
+}
+
+.nc-logo {
+  width: 200px;
+  padding: 12px;
+}
+@media screen and (min-width: 576px) {
+  .nc-logo {
+  width: 100%;
+  padding: 12px;
+  }
+}
