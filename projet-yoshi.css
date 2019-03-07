@@ -361,7 +361,6 @@ button:focus
 
 
 /*<----------------section-2---------------->*/
-
 .red { background-color: #DE0000; }
 .blue { background-color: #321491; }
 .green { background-color: #00B12D; }
@@ -420,7 +419,7 @@ body {
     right: -30px;
 }
 
-.carousel {
+.AGcarousel {
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -428,11 +427,12 @@ body {
     transition: transform 1s;
 }
 
-.carousel div {
+.AGcarousel div {
 	transform-style: preserve-3d;
 }
 
-.item {
+.AGitem {
+	top: 60px;
 	display: block;
 	position: absolute;
 	background: #000;
@@ -458,7 +458,7 @@ body {
 
 .f { transform: rotateY(300deg) translateZ(250px) rotateY(-300deg); }
 
-.card {
+.AGcard {
 	width: 100%;
 	height: 320px;
 	text-align: center;
@@ -469,7 +469,7 @@ body {
 	transition: all 0.3s ease;
 }
 
-.card .pattern-peach {
+.AGcard .pattern-peach {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-daisy.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -478,7 +478,7 @@ body {
     border-radius: 50px;
 }
 
-.card .pattern-mario {
+.AGcard .pattern-mario {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-mario.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -487,7 +487,7 @@ body {
     border-radius: 50px;
 }
 
-.card .pattern-daisy {
+.AGcard .pattern-daisy {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-peach.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -496,7 +496,7 @@ body {
     border-radius: 50px;
 }
 
-.card .pattern-luigi {
+.AGcard .pattern-luigi {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-luigi.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -505,7 +505,7 @@ body {
     border-radius: 50px;
 }
 
-.card .pattern-toad {
+.AGcard .pattern-toad {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-toad.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -514,7 +514,7 @@ body {
     border-radius: 50px;
 }
 
-.card .pattern-waluigi {
+.AGcard .pattern-waluigi {
 	background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-waluigi.gif);
 	background-attachment: fixed;
 	position: relative;
@@ -523,7 +523,7 @@ body {
     border-radius: 50px;
 }
 
-.card .icon-holder {
+.AGcard .icon-holder {
 	position: relative;
 	top: 0px;
 	display: inline-block;
@@ -532,7 +532,7 @@ body {
 	transition: 0.3s ease-out 0.3s;
 }
 
-.card .heading {
+.AGcard .heading {
 	position: relative;
 	font-weight: 900;
 	font-size: 0.5em;
@@ -540,23 +540,23 @@ body {
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.card .icon-holder > img.icon {
+.AGcard .icon-holder > img.icon {
 	width: 100px;
 }
 
-.card .icon-waluigi > img.icon {
+.AGcard .icon-waluigi > img.icon {
 	width: 129px;
 }
 
-.card:hover .icon-holder {
+.AGcard:hover .icon-holder {
 	top: -90px;
 }
 
-.card:hover .heading {
+.AGcard:hover .heading {
 	top: -120px;
 }
 
-.card .description {
+.AGcard .description {
 	width: 80%;
 	margin: -100px auto;
 	opacity: 0;
@@ -566,18 +566,19 @@ body {
 	transform: scale(0);
 }
 
-.card:hover .description {
+.AGcard:hover .description {
 	opacity: 1;
 	transform: scale(1);
 }
 
 .next, .prev {
 	position: absolute;
-	top: 170px;
+	top: 235px;
     cursor: pointer;
     color: #F2FF00;
     width: 120px;
     height: 120px;
+    text-align: center;
     padding-top: 20px;
     background: #FF930D;
     border-radius: 50%;
@@ -611,7 +612,8 @@ body {
 }
 
 .next {	margin-left: 470px; }
-.prev { margin-left: -500px; }
+
+.prev { margin-left: -435px; }
 
 .pattern-leaves {
     background: url(https://mario.nintendo.com/assets/img/patterns/leaves.png) repeat-X;
@@ -623,7 +625,7 @@ body {
 }
 
 .pattern-leaves-3d {
-    background: url(assets/leaves.png) repeat-X;
+    background: url(https://i.postimg.cc/V6VgYC2w/leaves.png) repeat-X;
     width: 100%;
     height: 16vh;
     position: absolute;
@@ -634,6 +636,7 @@ body {
 .equipe-campagne {
     position: absolute;
     bottom: 0;
+    left: 25px;
 }
 
 .equipe-campagne img{
@@ -641,7 +644,7 @@ body {
 }
 
 @media screen and (max-width: 460px) {
-    .carousel {
+    .AGcarousel {
         margin-top: -85px;
     }
     .intro-team {
