@@ -23,7 +23,7 @@
 		var imageCanvasContext = imageCanvas.getContext('2d');
 		var lineCanvas = document.createElement('canvas');
 		var lineCanvasContext = lineCanvas.getContext('2d');
-		var pointLifetime = 6000;
+		var pointLifetime = 1000;
 		var points = [];
 
 		if (image.complete) 
@@ -102,7 +102,7 @@
 		function drawLineCanvas() 
 		{
 			var minimumLineWidth = 25;
-			var maximumLineWidth = 100;
+			var maximumLineWidth = 200;
 			var lineWidthRange = maximumLineWidth - minimumLineWidth;
 			var maximumSpeed = 50;
 
@@ -193,6 +193,8 @@
 
 
 		/*-------------------script-section-2----------------------*/
+
+
 		var carousel = $(".carousel"),
 		items = $(".item"),
 		currdeg  = 0;
