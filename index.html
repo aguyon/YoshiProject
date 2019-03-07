@@ -2,10 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="jquery-quiz.js"></script>
-	<script src="bbscript.js"></script>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Responsive Width - fullPage.js</title>
@@ -16,261 +14,102 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://raw.githubusercontent.com/jchamill/jquery-quiz/master/src/jquery.quiz.css">
-	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="projet-yoshi.css" />
 	<link rel="stylesheet" type="text/css" href="RCcustom.css" />
-	<link rel="stylesheet" type="text/css" href="bbstyle.css" />
 	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet"> 
-	<style>
 
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-	}
-	.intro p{
-		color: #fff;
-	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
 </head>
 <body>
-
 	<div id="fullpage">
-		<div class="section" id="section1">
-			<div class="slide" id="slide1">
-				<div class="intro">
-					<div class="container-fluid ">
-						<h1> Yoshi Président</h1>
-						<div class="row fixed-bottom" style="width: 100vw;align-items: end;">
-							<div class="col-lg-2 col-md-3 col-xs-6 offset-2">
-								<img src="https://mario.nintendo.com/assets/img/characters/char-yoshi.png" class="img-fluid">
-							</div>
-							<div class="col-lg-2 col-md-3 col-xs-6 offset-3">
-								<img src="https://mario.nintendo.com/assets/img/characters/char-morty-wrench_2x.png" class="img-fluid">
-							</div>
 
-						</div>
-					</div>
+
+		<!------------------------section-1------------------------>
+
+
+		<div class="section" id="section1">
+			<div id="itouch" class="ktouch">
+				<div class="kbg"><img id="kbg2" src="media/kbg2.jpg"></div>
+
+				<div class="container-fluid align-items-end cont">
+					<section class="row kyoshi justify-content-center ro">
+						<img class="col-md-3 col-sm-6 col-9 yo" src="https://mario.nintendo.com/assets/img/characters/char-yoshi.png">
+						<div id="kinfo" class="col-md-4 col-sm-6 row justify-content-center flex-wrap yo2">
+							<h2 class="col-md-9 col-sm-9 col-12 align-self-end text-center">Yoshi</h2>
+							<button type="button" onclick="upTheTitle();" class="col-md-5 col-sm-5 col-4 align-self-start bg-transparent text-light">More &#160;<img id="karrow" src="https://mario.nintendo.com/assets/img//characters/arrow.svg"></button>
+							<span id="ktext">Le fidèle compagnon de Mario de Yoshi’s Island a une personnalité gentille et accommodante. Il possède une longue langue, qu'il utilise pour avaler des fruits et des ennemis entiers - et pond ensuite des œufs!</span>
+						</div> 
+
+						<div class="col-md-12 kfooter"></div>			
+					</section>
 				</div>
 			</div>
-
-			<div class="slide" id="slide2">
-				<h1>P2</h1>
-			</div>
 		</div>
+
+
+		<!------------------------section-2------------------------>
+
+
 		<div class="section" id="section2">
 			<div class="slide" id="slide2-1">
 				<div class="intro">
-					<h1>Team</h1>
 				</div>
 			</div>
-
 			<div class="slide" id="slide2-2">
-				<h1>P2</h1>
 			</div>
 		</div>
+
+
+		<!------------------------section-3------------------------>
+
+
 		<div class="section" id="section3">
 			<div class="slide" id="slide3-1">
 				<div class="intro">
-					<!-- Section Benoît Page 1 -->
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-sm">
-								<h2 id=bbtextpage1><b>"Un programme tout n'oeuf !"</b></h2>
-								<h4 class="d-sm-block" id="bbtextpage1"> Anciennement fidèle destrier d'un modeste plombier, je me présente à vous aujourd'hui afin de devenir votre nouveau Président ! Durant mon quinquennat, je souhaite que mon monde soit en harmonie avec le votre. D'autres dinosaures vont tentés de se présenter à vous, pour votre propre sécurité, je vous conseil de ne pas voter pour tout ce qui crache du feu ! </h4>
-							</div>
-							<div class="col-sm">
-								<div class="egg">
-									<img src="media/yoshiegg1.png" class="eggimg">
-								</div>
-							</div>
-							<div class="col-sm">
-								<h2 id=bbtextpage1><b>"Mais qu'est-ce qu'il y a dans ce programme ?"</b></h2>
-								<h4 class="d-sm-block" id=bbtextpage1> Dans cet oeuf se cache la solution à tout vos problèmes. Je ne l'ouvrirai que lorsque je serai élu. Sachez que c'est encore plus impressionnant que Mario et son étoile ! Un flot de bonheur et de joie se déversera dans votre monde et partagera ainsi l'ambiance que mon monde possède. </h4>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="slide" id="slide3-2">
-				<!-- Section Benoît Page 2 -->
-				<div class="container">
-					<!-- Grid row -->
-					<div class="row">
-
-						<!-- Grid column -->
-						<div class="col-md-10 col-lg-9 col-xl-6 mb-r">
-
-							<!--Panel-->
-							<div class="card card-body mb-3">
-								<div class="media d-block d-sm-flex">
-									<img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="media/yoshibomb.png"
-									alt="warningbomb" id="bbyoshibomb">
-									<div class="media-body text-center text-md-left ml-md-3 ml-0">
-										<p>Attention ! Les autres candidats peuvent-vous mentir quand à leurs attentions. Ne gobez pas n'importe quoi ! Yoshi veuillera à vous révéler la vérité, il vous sera fidèle !</p>
-									</div>
-								</div>
-							</div>
-							<!--/.Panel-->
-
-							<!--Panel-->
-							<div class="card card-body mb-3">
-								<div class="media d-block d-sm-flex">
-									<div class="media-body pr-md-3 pr-0 text-center text-md-left">
-										<p>Grâce aux pouvoirs du champignon rouge, notre monde grandira, littéralement, vers un avenir meilleur. Je rendra également légale toute les drogues provenant de mon monde afin que tout le monde puisse en profiter en toute liberté.</p>
-									</div>
-									<img class="d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto" src="media/bbchampignon.png" width="150" height="150" alt="powerupmushroom" id="bbyoshichampignon">
-								</div>
-							</div>
-							<!--/.Panel-->
-
-							<!--Panel-->
-							<div class="card card-body">
-								<div class="media d-block d-sm-flex">
-									<img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="media/bbgreenturtle.png" alt="greenturtle" width="150" height="150" id="bbgreenturtle">
-									<div class="media-body text-center text-md-left ml-md-3 ml-0">
-										<p>Je vais introduire un nouveau mode de transport totalement écolo et énergie-free. Il suffit de se poser sur votre tortue, verte pour les courtes distances, rouges pour les longues et bleu avec les ailes pour voler au-dessus des océans.</p>
-									</div>
-								</div>
-							</div>
-							<!--/.Panel-->
-
-						</div>
-						<!-- Grid column -->
-
-						<!-- Grid column -->
-						<div class="col-md-10 col-lg-9 col-xl-6">
-
-							<!--Panel-->
-							<div class="card mb-3">
-								<h3 class="card-header indigo white-text text-uppercase text-center">Les prochains meetings !</h3>
-								<div class="card-body">
-									<div class="media d-block d-md-flex mt-md-0 mt-4 mb-4">
-										<div class="media-body ml-md-3 ml-0">
-											<iframe src="https://www.google.com/maps/d/embed?mid=192M6t3LffQyZpKAUdXm01ddGeqgF6y9y" width="480" height="380" id="bbgooglemap"></iframe>
-										</div>
-									</div>
-
-									<div class="media d-block d-md-flex">
-										<div class="media-body mr-md-3 mr-0">
-											<p align="justify">Utilise la carte ci-dessus afin de découvrir les prochains meetings de Yoshi, ton nouveau président !</p>
-											<div class="text-center text-md-left">
-												<button type="button" class="btn btn-indigo btn-rounded btn-md">En savoir plus !</button>
-											</div>
-										</div>
-										<img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto" src="media/bbyoshimap.png"
-										alt="Yoshimeetingmap" id="bbyoshimap" width="30%" height="30%">
-									</div>
-								</div>
-							</div>
-							<!--/.Panel-->
-
-						</div>
-
-					</div>
-					<!-- Grid row -->
-				</div>
-
-
-
 			</div>
 		</div>
 
 
-
-
+		<!------------------------section-4------------------------>
 
 
 		<div class="section" id="section4">
-			<div class="slide" id="slide4-1">	
-				<div class="container-fluid">
-					<h1>Yoshi quiz</h1>	
-					<div class="row">
-						<div class="col-12">
-							<div id="quiz">
-								<div id="quiz-header">
-									<p class="faded">Un petit quiz à propos de votre futur président</p>
-								</div>
-								<div id="quiz-start-screen">
-									<p><a href="#" id="quiz-start-btn" class="quiz-button">Start</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row fixed-bottom" style="width: 100vw;align-items: end;">
-						<div class="col-lg-2 col-md-3 col-xs-4 offset-2">
-							<img src="flower_pipe.png" class="RCyosh">
-						</div>
-						<div class="col-lg-2 col-md-3 d-none d-md-block offset-3">
-							<img src="key.png" class="RCkey">
-						</div>
-						<div class="col-lg-2 col-md-3 d-none d-md-block">
-							<img src="morty.png" class="img-fluid">
-						</div>
-					</div>
+			<div class="slide" id="slide4-1">
+				<div class="intro">
 				</div>
 			</div>
 			<div class="slide" id="slide4-2">
-				<h1>Résultats</h1>
 			</div>
 		</div>
+
+
+		<!------------------------section-5------------------------>
+
+
 		<div class="section" id="section5">
 			<div class="slide" id="slide5-1">
 				<div class="intro">
-					<h1>Shop</h1>
 				</div>
 			</div>
 
 			<div class="slide" id="slide5-2">
-				<h1>Panier</h1>
 			</div>
 		</div>
+
+
+		<!----------------------fin-section------------------------->
+
+
 	</div>
 
 	<script type="text/javascript" src="fullpage.js"></script>
 	<script type="text/javascript" src="examples.js"></script>
 	<script type="text/javascript" src="RCcustom.js"></script>
+	<script type="text/javascript" src="yoshi-2022.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-	<script type="text/javascript">
-		var myFullpage = new fullpage('#fullpage', {
-			anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
-			sectionsColor: ['#C63D0F', '#1BBC9B', '#FFE853', '#C63D0F', '#1BBC9B'],
-			navigation: false,
-			recordHistory: false,
-			fadingEffect:'section',
-			navigationPosition: 'right',
-			navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-			responsiveWidth: 900,
-			afterResponsive: function(isResponsive){
-
-			}
-
-		});
-	</script>
-
 </body>
 </html>
