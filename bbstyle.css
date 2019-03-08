@@ -6,22 +6,30 @@
 
 #slide3-1 {
 	font-family: 'Catamaran';
+	background: url('media/bbfondjaune.png') repeat;
 }
 
-#bbyoshiface {
-	margin-bottom: 100px;
+#bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
+	color: black;
+	text-align: center;
 }
 
-#bbtextpage1 {
-	color: white;
+#bbtextpage1, #bbtextpage2 {
+	margin-bottom: 25px;
 }
 
+#bbtextpage2 {
+	margin-top: -25px;
+}
 
 /* Egg animation --------------------*/
 
+.eggimg {
+	margin-left: 20px;
+}
+
 .egg {
 	overflow: hidden;
-	
 	animation: egganim 12s ease-in-out 0s infinite;
 	transform-origin: 50% 90%;
 	margin-top: 20px;
@@ -59,20 +67,21 @@
 }
 
 @media(max-width:576px){
-	#bbtextpage1 {
+	#bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
 		font-size: 1em;
 		text-align: center;
 	}
 	.eggimg {
 		width: 200px;
 		height: 250px;
-		margin-left: 120px;
+		margin-left: 100px;
+		margin-bottom: 20px;
 	}
 	#bbcard1, #bbcard2, #bbcard3 {
 		display: none;
 	}
 	#bbgooglemap {
-		width: 390px;
+		width: 360px;
 		height: 250px;
 	}
 }

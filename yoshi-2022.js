@@ -23,7 +23,7 @@
 		var imageCanvasContext = imageCanvas.getContext('2d');
 		var lineCanvas = document.createElement('canvas');
 		var lineCanvasContext = lineCanvas.getContext('2d');
-		var pointLifetime = 1000;
+		var pointLifetime = 6000;
 		var points = [];
 
 		if (image.complete) 
@@ -102,7 +102,7 @@
 		function drawLineCanvas() 
 		{
 			var minimumLineWidth = 25;
-			var maximumLineWidth = 200;
+			var maximumLineWidth = 100;
 			var lineWidthRange = maximumLineWidth - minimumLineWidth;
 			var maximumSpeed = 50;
 
@@ -193,8 +193,6 @@
 
 
 		/*-------------------script-section-2----------------------*/
-
-
 		var carousel = $(".carousel"),
 		items = $(".item"),
 		currdeg  = 0;
@@ -223,16 +221,31 @@
 		/*-------------------script-section-4----------------------*/
 			
 			document.getElementById("RCpipe").addEventListener('mouseover', function() {
-			document.getElementById("yoshiH").style.transform = "translate(0px, -300px)";
+			document.getElementById("yoshiH").style.transform = "translate(0px, -40vh)";
 			});
 			
-			document.getElementById("RCpipe").addEventListener('mouseout', function() {
-			document.getElementById("yoshiH").style.transform = "translate(0px, 300px)";
+			document.getElementById("RCpipe").addEventListener('click', function() {
+				var audio = new Audio('media/yoshi-sound-2.mp3');
+			audio.play();
 			});
-		  
-			document.getElementById("slide4-1").addEventListener('mouseover', function() {
-			document.getElementById("RCpipe").style.opacity = "1";
-			});		  
+
+			document.getElementById("RCpipe").addEventListener('mouseout', function() {
+			document.getElementById("yoshiH").style.transform = "translate(0px, 0vh)";
+			});
+
+			/*document.getElementById("RCpipe").addEventListener('mouseover', function() {
+			document.getElementById("yoshiH").style.animation = "rotation360 6s";
+				});
+				
+				document.getElementById("RCpipe").addEventListener('mouseout', function() {
+				document.getElementById("yoshiH").style.animation = "rotation360 6s";
+				});	*/	  
+	
+				/*if (document.getElementById("quiz-results") == "Tu as 4 sur 4 !") {
+					var audio = new Audio('media/yoshi-sound-2.mp3');
+					audio.play();
+				};*/
+
 
 		/*-------------------script-section-5----------------------*/
 
