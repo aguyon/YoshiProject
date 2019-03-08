@@ -23,7 +23,7 @@
 		var imageCanvasContext = imageCanvas.getContext('2d');
 		var lineCanvas = document.createElement('canvas');
 		var lineCanvasContext = lineCanvas.getContext('2d');
-		var pointLifetime = 6000;
+		var pointLifetime = 1000;
 		var points = [];
 
 		if (image.complete) 
