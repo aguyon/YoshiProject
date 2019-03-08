@@ -640,6 +640,9 @@ button:focus
     .acarousel {
         margin-top: -85px;
     }
+    .awrapper {
+    	top: 0;
+    }
     .aintro-team {
         margin-top: -360px;
         margin-bottom: 120px;
@@ -660,6 +663,23 @@ button:focus
     }
     .abg-flower {
         display: none;
+    }
+    .equipe-campagne {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 820px) and (min-width: 461px) {
+	.next, .prev {
+        margin-top: 250px;
+    }
+    .next {
+        margin-left: 295px;
+    	margin-top: 220px;
+    }
+    .prev {
+        margin-left: -181px;
+    	margin-top: 220px;
     }
     .equipe-campagne {
         display: none;
