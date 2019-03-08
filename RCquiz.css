@@ -87,6 +87,7 @@
 
 #quiz-start-btn {
     text-align: center;
+    max-width: 750px;
     width: 30vw;
     transition-duration: .4s;
     border-radius: 10px;
@@ -99,9 +100,22 @@
     transition-duration: .4s;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
 
     #quiz-start-btn{font-size:2em;}
+    #RCmorty {
+        display: none;
+    }
+    #RCkey {
+        display: none;
+    }
+    #RCpipe {
+        display: none;
+    }
+    #yoshiH {
+        display: none;
+    }
+
 
 }
 
