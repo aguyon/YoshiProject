@@ -230,7 +230,7 @@
 			});
 
 			document.getElementById("RCpipe").addEventListener('mouseout', function() {
-			document.getElementById("yoshiH").style.transform = "translate(0px, 40vh)";
+			document.getElementById("yoshiH").style.transform = "translate(0px, 0vh)";
 			});
 
 			/*document.getElementById("RCpipe").addEventListener('mouseover', function() {
