@@ -74,14 +74,14 @@
 	.eggimg {
 		width: 200px;
 		height: 250px;
-		margin-left: 120px;
+		margin-left: 100px;
 		margin-bottom: 20px;
 	}
 	#bbcard1, #bbcard2, #bbcard3 {
 		display: none;
 	}
 	#bbgooglemap {
-		width: 390px;
+		width: 360px;
 		height: 250px;
 	}
 }
