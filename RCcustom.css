@@ -1,0 +1,73 @@
+
+body {
+  background: #0c1514;
+  color: #fff;
+}
+h1 {
+  color: #63c5bc;
+}
+
+#section4 {
+    background-image: url("media/yoshi_island.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#RCkey {
+    animation: rotation360 3s infinite;
+    width: 8vw;
+    left: 22vw;
+    position: absolute;
+    bottom: 2vw; 
+}
+
+#RCmorty {
+    width: 10vw;
+    left: 28vw;
+    position: absolute;
+    bottom: 0; 
+}
+
+#RCpipe {
+    position: absolute;
+    bottom: 0;
+    width: 10vw;
+    left: 70vw;
+    z-index: 1100;
+}
+
+#yoshiH {
+    position: absolute;
+    bottom: 0;
+    width: 7vw;
+    left: 72vw;
+    transition-duration: 1s;
+    z-index: 100;    
+}
+
+
+@keyframes rotation360 {
+
+    0% {
+
+    }
+
+    20% {
+        transform: translateX(-14vw) rotateZ(-180deg)
+    }
+
+    40% {
+
+        transform: rotateZ(360deg);
+
+    }
+
+    100% {
+
+        transform: rotateZ(360deg);
+
+    }
+
+}
