@@ -659,6 +659,7 @@ button:focus
     .aintro-team {
         margin-top: -360px;
         margin-bottom: 120px;
+        width: 85%;
     }
     .next, .prev {
         margin-top: 250px;
