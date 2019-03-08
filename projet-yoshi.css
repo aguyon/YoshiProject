@@ -470,7 +470,6 @@ button:focus
 
 .acard .pattern-peach {
     background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-daisy.gif);
-    background-attachment: fixed;
     position: relative;
     width: auto;
     height: 318px;
@@ -479,7 +478,6 @@ button:focus
 
 .acard .pattern-mario {
     background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-mario.gif);
-    background-attachment: fixed;
     position: relative;
     width: auto;
     height: 318px;
@@ -488,7 +486,6 @@ button:focus
 
 .acard .pattern-daisy {
     background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-peach.gif);
-    background-attachment: fixed;
     position: relative;
     width: auto;
     height: 318px;
@@ -497,7 +494,6 @@ button:focus
 
 .acard .pattern-luigi {
     background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-luigi.gif);
-    background-attachment: fixed;
     position: relative;
     width: auto;
     height: 318px;
@@ -506,7 +502,6 @@ button:focus
 
 .acard .pattern-toad {
     background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-toad.gif);
-    background-attachment: fixed;
     position: relative;
     width: auto;
     height: 318px;
@@ -515,7 +510,6 @@ button:focus
 
 .acard .pattern-waluigi {
     background-image: url(https://mario.nintendo.com/assets/img/characters/pattern-waluigi.gif);
-    background-attachment: fixed;
     position: relative;
     width: auto;
     height: 318px;
@@ -654,12 +648,12 @@ button:focus
         margin-top: 250px;
     }
     .next {
-        margin-left: 20px;
-        margin-top: 125px;
+        margin-left: 140px;
+    	margin-top: 135px;
     }
     .prev {
-        margin-left: -140px;
-        margin-top: 125px;
+        margin-left: -20px;
+        margin-top: 137px;
     }
     .abg-brick {
         display: none;
