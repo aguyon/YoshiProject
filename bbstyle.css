@@ -6,18 +6,19 @@
 
 #slide3-1 {
 	font-family: 'Catamaran';
+	background: url('media/bbfondjaune.png') repeat;
 }
 
-#bbyoshiface {
-	margin-bottom: 100px;
+#bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
+	color: black;
 }
 
-#bbtextpage1 {
-	color: white;
+#bbtextpage1, #bbtextpage2 {
+	text-align: center;
 }
-
 
 /* Egg animation --------------------*/
+
 
 .egg {
 	overflow: hidden;
@@ -59,7 +60,7 @@
 }
 
 @media(max-width:576px){
-	#bbtextpage1 {
+	#bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
 		font-size: 1em;
 		text-align: center;
 	}
