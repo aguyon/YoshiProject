@@ -1,16 +1,18 @@
-#slide3-2 {
-	background: url('media/bbfondjaune.png') repeat;
-	color: black;
-	font-family: 'Catamaran';
+#section3 {
+	background-image: url("media/bbbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Catamaran';
+    color: black;
 }
 
-#slide3-1 {
-	font-family: 'Catamaran';
+#slide3-2 {
 	background: url('media/bbfondjaune.png') repeat;
 }
 
 #bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
-	color: black;
+	color: transparent;
 	text-align: center;
 }
 
@@ -83,6 +85,10 @@
 	#bbgooglemap {
 		width: 360px;
 		height: 250px;
+	}
+	#slide3-1 {
+		background-size: 260%;
+		background-position: bottom;
 	}
 }
 
