@@ -4,15 +4,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Catamaran';
-    color: black;
+    color: #F7F7F7;
 }
 
 #slide3-2 {
 	background: url('media/bbfondjaune.png') repeat;
+	color: black;
 }
 
 #bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
-	color: transparent;
 	text-align: center;
 }
 
@@ -124,3 +124,5 @@
 #bbgreenturtle:hover {
 	opacity: 1;
 }
+
+/* text animation ---------------*/
