@@ -24,6 +24,7 @@
 	margin-top: -25px;
 }
 
+
 /* Egg animation --------------------*/
 
 .eggimg {
@@ -37,6 +38,19 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+#eggID {
+	display: inline;
+}
+
+#eggCrackID {
+	display: none;
+}
+
+#eggOpenID {
+	display: none;
+}
+
 
 @keyframes egganim {
 	0% { transform: rotateZ( 0deg ); }
