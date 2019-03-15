@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Catamaran';
+    font-family: 'Catamaran' !important;
     color: #F7F7F7;
 }
 
@@ -87,6 +87,9 @@
 		font-size: 1em;
 		text-align: center;
 	}
+	#bbtextpage11, #bbtextpage22 {
+		display: none;
+	}
 	.eggimg {
 		width: 200px;
 		height: 250px;
@@ -107,36 +110,42 @@
 }
 
 #bbyoshibomb {
-	opacity: .5;
+	opacity: 1;
 }
 
 #bbyoshibomb:hover {
-	opacity: 1;
+	opacity: .5;
 }
 
 #bbyoshimap {
-	opacity: .5;
-
+	opacity: 1;
 }
 
 #bbyoshimap:hover {
-	opacity: 1;
+	opacity: .5;
 }
 
 #bbyoshichampignon {
-	opacity: .5;
+	opacity: 1;
 }
 
 #bbyoshichampignon:hover {
-	opacity: 1;
-}
-
-#bbgreenturtle {
 	opacity: .5;
 }
 
-#bbgreenturtle:hover {
+#bbgreenturtle {
 	opacity: 1;
 }
 
+#bbgreenturtle:hover {
+	opacity: .5;
+}
+
 /* text animation ---------------*/
+
+#titremeeting {
+	display: inline-block;
+	line-height: 1em;
+	margin-top: 20px;
+	color: green;
+}
