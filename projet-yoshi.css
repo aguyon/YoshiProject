@@ -246,16 +246,27 @@ body
 
 .parPanneau
 {
-    height: 20vh;
-    width: 20vh;
+    text-align: center;
+    line-height: 69.5vh;
+    font-size: 3.4em;
+    font-weight: 900;
+    width: 36vh;
+    height: 45vh;
+    right: 10%;
+    background: url("media/panneau.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 2;
 }
 
-.lol
+.parPanneau:hover
 {
-    margin-top: 20vh;
-    z-index: 1;
-    height: 20vh;
-    width: 20vh;
+    opacity: 0.7;
+}
+
+.parPanneau:active
+{
+    opacity: 0.4;
 }
 
 
@@ -373,6 +384,32 @@ button:focus
     .cont button
     {
         max-width: 50.666667%;
+    }
+}
+@media screen and (min-width: 276px) and (max-width: 1100px)
+{
+    #ktext
+    {
+        font-size: 1.3em;
+    }
+
+    .yo
+    {
+        max-width: 50%;
+        height: 30%;
+    }
+
+    .ktouch:hover .yo
+    {
+        margin-left: -5%;
+    }
+
+    .parPanneau
+    {
+        width: 26vh;
+        height: 35vh;
+        line-height: 50vh;
+        font-size: 2em;
     }
 }
 
