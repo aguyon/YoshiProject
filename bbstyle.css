@@ -24,6 +24,9 @@
 	margin-top: -25px;
 }
 
+#bbcard1, #bbcard2, #bbcard3 {
+	margin-top: 15px;
+}
 
 /* Egg animation --------------------*/
 
@@ -144,8 +147,12 @@
 /* text animation ---------------*/
 
 #titremeeting {
-	display: inline-block;
-	line-height: 1em;
-	margin-top: 20px;
-	color: green;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  margin-top: 20px;
+}
+
+#titremeeting.word {
+  display: inline-block;
+  line-height: 1em;
 }

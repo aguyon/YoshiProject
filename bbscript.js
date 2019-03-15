@@ -1,10 +1,12 @@
+// titre meeting //
+
 anime.timeline({loop: true})
   .add({
     targets: '#titremeeting .word',
     scale: [14,1],
     opacity: [0,1],
     easing: "easeOutCirc",
-    duration: 400,
+    duration: 800,
     delay: function(el, i) {
       return 800 * i;
     }
@@ -15,6 +17,8 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+// button //
 
 const mapbutton = document.getElementById("bigmapbutton")
 
