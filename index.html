@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="icon" href="media/favicone.ico" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="jquery-quiz.js"></script>
@@ -32,20 +33,39 @@
 
 		
 	<div class="container-fluid nc-fixed">
-		<div class="row">
-			<div class="col-12 col-sm-2 nc-fond">
-				<a href="#"><img src="media/yoshi-2022-500px.png" class="nc-logo"></a>
-			</div>
-			<nav class="col-12 col-sm-10 nc-nav-collapse">
-				<ul>
-					<li><a href="#equipe">Equipe</a></li>
-					<li><a href="#programme">Programme</a></li>
-					<li><a href="#quiz">Quiz</a></li>
-					<li><a href="#boutique">Boutique</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-12 col-sm-2 nc-fond">
+                <a href="#"><img src="media/yoshi-2022-500px.png" class="nc-logo"></a>
+            </div>
+            <nav class="col-12 col-sm-10 nc-nav-collapse">
+              <ul>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#boutique">Boutique</a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+    <script>
+      var navigation = responsiveNav(".nc-nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 284,                  // Integer: Speed of the transition, in milliseconds
+        label: "Menu",                    // String: Label for the navigation toggle
+        insert: "after",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nc-nav-collapse",      // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "nc-js",                 // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+    
+    
 	<div id="fullpage">
 
 
@@ -76,9 +96,7 @@
 
 		<div class="section" id="section2">
 			<div class="slide aslide2-1" id="slide2-1">
-				<div class="intro aintro-team">
-					<h1>Equipe</h1>
-				</div>
+				<div class="intro aintro-team"></div>
 				<div class="container acontainer">
 					<div class="abg-flower"></div>
 					<div class="abg-brick"></div>
@@ -210,14 +228,15 @@
 							</div>
 							<div class="col-sm">
 								<div class="egg">
-									<img src="media/yoshiegg1.png" class="eggimg" id="eggID">
-									<img src="media/yoshieggCrack.png" class="eggimg" id="eggCrackID">
-									<img src="media/yoshieggOpen.png" class="eggimg" id="eggOpenID">
+									<img src="media/yoshiegg-01.png" class="eggimg" id="eggID">
+									<img src="media/yoshiegg-02.png" class="eggimg" id="eggCrackID">
+									<img src="media/yoshiegg-03.png" class="eggimg" id="eggOpenID">
+									<img src="media/yoshiegg-04.png" class="eggimg" id="eggYoshiID">
 								</div>
 							</div>
 							<div class="col-sm">
 								<h2 id=bbtextpage2><b>Mais qu'est-ce qu'il y a dans ce programme ?</b></h2>
-								<h4 id=bbtextpage22> Dans cet oeuf se cache la solution à tout vos problèmes. Je ne l'ouvrirai que lorsque je serai élu. Sachez que c'est encore plus impressionnant que Mario et son étoile ! Un flot de bonheur et de joie se déversera dans votre monde et partagera ainsi l'ambiance que mon monde possède. </h4>
+								<h4 id=bbtextpage22> Dans cet oeuf se cache la solution à tout vos problèmes. Je ne l'ouvrirai que lorsque je serai élu. Sachez que c'est encore plus impressionnant que Mario et son étoile ! Un flot de bonheur et de joie se déversera dans votre monde et partagera ainsi l'ambiance que mon monde possède. Voilà voilà, ici faudra mettre la suite du texte quoi.</h4>
 							</div>
 						</div>
 					</div>
@@ -274,11 +293,15 @@
 
 							<!--Panel-->
 							<div class="card mb-3">
-								<h3 class="card-header indigo white-text text-uppercase text-center">Les prochains meetings !</h3>
+								<h3 class="text-center" id="titremeeting">
+									<span class="word">Les </span>
+									<span class="word">prochains </span>
+									<span class="word">meetings !</span>
+								</h3>
 								<div class="card-body" id="bbcard4">
 									<div class="media d-block d-md-flex mt-md-0 mt-4 mb-4">
 										<div class="media-body ml-md-3 ml-0">
-											<iframe src="https://www.google.com/maps/d/embed?mid=192M6t3LffQyZpKAUdXm01ddGeqgF6y9y" width="100%" height="313" id="bbgooglemap"></iframe>
+											<iframe src="https://www.google.com/maps/d/embed?mid=192M6t3LffQyZpKAUdXm01ddGeqgF6y9y" width="100%" height="313px" id="bbgooglemap"></iframe>
 										</div>
 									</div>
 
@@ -286,7 +309,7 @@
 										<div class="media-body mr-md-3 mr-0">
 											<p align="justify">Utilise la carte ci-dessus afin de découvrir les prochains meetings de Yoshi, ton nouveau président !</p>
 											<div class="text-center text-md-left">
-												<button type="button" class="btn btn-indigo btn-rounded btn-md">En savoir plus !</button>
+												<button type="button" class="btn btn-indigo btn-rounded btn-md" id="bigmapbutton" target="_blank">En savoir plus !</button>
 											</div>
 										</div>
 										<img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto" src="media/bbyoshimap.png"
@@ -498,6 +521,8 @@
 
 			<!----------------------fin-section------------------------->
 
+
+		<!----------------------fin-section------------------------->
 
 		</div>
 		<script>

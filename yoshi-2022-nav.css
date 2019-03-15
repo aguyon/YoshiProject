@@ -1,4 +1,13 @@
-
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section,
+summary, hgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 a:active,
 a:hover {
   outline: 0;
@@ -10,7 +19,14 @@ a:hover {
 @viewport { width: device-width; }
 
 
-
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #37302a;
+  background: #2AA50D;
+  min-height: 2000px;
+}
 
 .nc-fixed {
     position: fixed;
@@ -22,11 +38,10 @@ a:hover {
     height: 140px;
 }
 @media screen and (min-width: 576px) {
-  
   .nc-fond {
     width: 100%;
     height: 60px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     overflow: visible;
     }
 }
@@ -70,7 +85,7 @@ a:hover {
   text-decoration: none;
   width: 100%;
   height: 60px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid white;
   padding: 0.7em 1em;
   float: left;
@@ -135,7 +150,7 @@ a:hover {
   top: 0;
   left: 0;
   padding-right: 24px;
-  background: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 1);
   font-family: "responsivenav", sans-serif;
   font-style: normal;
   font-weight: normal;

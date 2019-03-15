@@ -462,21 +462,21 @@ button:focus
     perspective: 1000px;
 }
 
-.abg-flower {
-    background: url(https://i.postimg.cc/CLfPxcFQ/flower.png) no-repeat center center;
-    background-size: 63px 50px;
+.abg-flower{
+    background: url(https://i.postimg.cc/T2S8Lmfd/greg-Flower.png) no-repeat center center;
+    background-size: 63px 75px;
     position: absolute;
     width: 304px;
     height: 10px;
     padding-top: 20vh;
-    margin-top: -5vh;
+    margin-top: 5vh;
     right: 8px;
-    transition: margin 0.5s linear;
+    transition: margin 0.8s linear;
 }
 
 .abg-flower:hover
 {
-    margin-top: -8vh;
+    margin-top: -1vh;
 }
 
 .abg-brick {

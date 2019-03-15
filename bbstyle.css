@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Catamaran';
+    font-family: 'Catamaran' !important;
     color: #F7F7F7;
 }
 
@@ -14,6 +14,7 @@
 
 #bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
 	text-align: center;
+	overflow: hidden;
 }
 
 #bbtextpage1, #bbtextpage2 {
@@ -24,11 +25,15 @@
 	margin-top: -25px;
 }
 
+#bbcard1, #bbcard2, #bbcard3 {
+	margin-top: 15px;
+}
 
 /* Egg animation --------------------*/
 
 .eggimg {
 	margin-left: 20px;
+	margin-bottom: 100px;
 }
 
 .egg {
@@ -50,6 +55,11 @@
 #eggOpenID {
 	display: none;
 }
+
+#eggYoshiID {
+	display: none;
+}
+
 
 
 @keyframes egganim {
@@ -87,11 +97,14 @@
 		font-size: 1em;
 		text-align: center;
 	}
+	#bbtextpage11, #bbtextpage22 {
+		display: none;
+	}
 	.eggimg {
 		width: 200px;
 		height: 250px;
 		margin-left: 100px;
-		margin-bottom: 20px;
+		margin-bottom: 100px;
 	}
 	#bbcard1, #bbcard2, #bbcard3 {
 		display: none;
@@ -107,36 +120,46 @@
 }
 
 #bbyoshibomb {
-	opacity: .5;
+	opacity: 1;
 }
 
 #bbyoshibomb:hover {
-	opacity: 1;
+	opacity: .5;
 }
 
 #bbyoshimap {
-	opacity: .5;
-
+	opacity: 1;
 }
 
 #bbyoshimap:hover {
-	opacity: 1;
+	opacity: .5;
 }
 
 #bbyoshichampignon {
-	opacity: .5;
+	opacity: 1;
 }
 
 #bbyoshichampignon:hover {
-	opacity: 1;
-}
-
-#bbgreenturtle {
 	opacity: .5;
 }
 
-#bbgreenturtle:hover {
+#bbgreenturtle {
 	opacity: 1;
 }
 
+#bbgreenturtle:hover {
+	opacity: .5;
+}
+
 /* text animation ---------------*/
+
+#titremeeting {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  margin-top: 20px;
+}
+
+#titremeeting.word {
+  display: inline-block;
+  line-height: 1em;
+}
