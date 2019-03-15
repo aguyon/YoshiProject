@@ -1,16 +1,18 @@
+#section3 {
+	background-image: url("media/bbbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Catamaran';
+    color: #F7F7F7;
+}
+
 #slide3-2 {
 	background: url('media/bbfondjaune.png') repeat;
 	color: black;
-	font-family: 'Catamaran';
-}
-
-#slide3-1 {
-	font-family: 'Catamaran';
-	background: url('media/bbfondjaune.png') repeat;
 }
 
 #bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
-	color: black;
 	text-align: center;
 }
 
@@ -21,6 +23,7 @@
 #bbtextpage2 {
 	margin-top: -25px;
 }
+
 
 /* Egg animation --------------------*/
 
@@ -35,6 +38,19 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+#eggID {
+	display: inline;
+}
+
+#eggCrackID {
+	display: none;
+}
+
+#eggOpenID {
+	display: none;
+}
+
 
 @keyframes egganim {
 	0% { transform: rotateZ( 0deg ); }
@@ -84,6 +100,10 @@
 		width: 360px;
 		height: 250px;
 	}
+	#slide3-1 {
+		background-size: 260%;
+		background-position: bottom;
+	}
 }
 
 #bbyoshibomb {
@@ -118,3 +138,5 @@
 #bbgreenturtle:hover {
 	opacity: 1;
 }
+
+/* text animation ---------------*/
