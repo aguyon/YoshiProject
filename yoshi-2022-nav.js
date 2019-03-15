@@ -1,18 +1,3 @@
-var navigation = responsiveNav(".nc-nav-collapse", {
-        animate: true,                    // Boolean: Use CSS3 transitions, true or false
-        transition: 284,                  // Integer: Speed of the transition, in milliseconds
-        label: "Menu",                    // String: Label for the navigation toggle
-        insert: "after",                  // String: Insert the toggle before or after the navigation
-        customToggle: "",                 // Selector: Specify the ID of a custom toggle
-        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
-        openPos: "relative",              // String: Position of the opened nav, relative or static
-        navClass: "nc-nav-collapse",      // String: Default CSS class. If changed, you need to edit the CSS too!
-        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
-        jsClass: "nc-js",                 // String: 'JS enabled' class which is added to <html> element
-        init: function(){},               // Function: Init callback
-        open: function(){},               // Function: Open callback
-        close: function(){}               // Function: Close callback
-      });
 (function (document, window, index) {
   "use strict";
   var responsiveNav = function (el, options) {
@@ -22,7 +7,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
     /**
      * getComputedStyle polyfill for old browsers
      */
-     if (!computed) {
+    if (!computed) {
       window.getComputedStyle = function(el) {
         this.el = el;
         this.getPropertyValue = function(prop) {
@@ -52,8 +37,8 @@ var navigation = responsiveNav(".nc-nav-collapse", {
      * @param  {Function} fn
      * @param  {boolean}  bubbling
      */
-     var addEvent = function (el, evt, fn, bubble) {
-      if ("addEventListener" in el) {
+    var addEvent = function (el, evt, fn, bubble) {
+        if ("addEventListener" in el) {
           // BBOS6 doesn't support handleEvent, catch and polyfill
           try {
             el.addEventListener(evt, fn, bubble);
@@ -79,7 +64,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
           }
         }
       },
-      
+    
       /**
        * Remove Event
        *
@@ -88,7 +73,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
        * @param  {Function} fn
        * @param  {boolean}  bubbling
        */
-       removeEvent = function (el, evt, fn, bubble) {
+      removeEvent = function (el, evt, fn, bubble) {
         if ("removeEventListener" in el) {
           try {
             el.removeEventListener(evt, fn, bubble);
@@ -111,14 +96,14 @@ var navigation = responsiveNav(".nc-nav-collapse", {
           }
         }
       },
-      
+    
       /**
        * Get the children of any element
        *
        * @param  {element}
        * @return {array} Returns matching elements in an array
        */
-       getChildren = function (e) {
+      getChildren = function (e) {
         if (e.children.length < 1) {
           throw new Error("The Nav container has no containing elements");
         }
@@ -132,43 +117,43 @@ var navigation = responsiveNav(".nc-nav-collapse", {
         }
         return children;
       },
-      
+    
       /**
        * Sets multiple attributes at once
        *
        * @param {element} element
        * @param {attrs}   attrs
        */
-       setAttributes = function (el, attrs) {
+      setAttributes = function (el, attrs) {
         for (var key in attrs) {
           el.setAttribute(key, attrs[key]);
         }
       },
-      
+    
       /**
        * Adds a class to any element
        *
        * @param {element} element
        * @param {string}  class
        */
-       addClass = function (el, cls) {
+      addClass = function (el, cls) {
         if (el.className.indexOf(cls) !== 0) {
           el.className += " " + cls;
           el.className = el.className.replace(/(^\s*)|(\s*$)/g,"");
         }
       },
-      
+    
       /**
        * Remove a class from any element
        *
        * @param  {element} element
        * @param  {string}  class
        */
-       removeClass = function (el, cls) {
+      removeClass = function (el, cls) {
         var reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
         el.className = el.className.replace(reg, " ").replace(/(^\s*)|(\s*$)/g,"");
       },
-      
+    
       /**
        * forEach method that passes back the stuff we need
        *
@@ -176,13 +161,13 @@ var navigation = responsiveNav(".nc-nav-collapse", {
        * @param  {Function} callback
        * @param  {scope}    scope
        */
-       forEach = function (array, callback, scope) {
+      forEach = function (array, callback, scope) {
         for (var i = 0; i < array.length; i++) {
           callback.call(scope, i, array[i]);
         }
       };
 
-      var nav,
+    var nav,
       opts,
       navToggle,
       styleElement = document.createElement("style"),
@@ -191,14 +176,14 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       isMobile,
       navOpen;
 
-      var ResponsiveNav = function (el, options) {
+    var ResponsiveNav = function (el, options) {
         var i;
 
         /**
          * Default options
          * @type {Object}
          */
-         this.options = {
+        this.options = {
           animate: true,                    // Boolean: Use CSS3 transitions, true or false
           transition: 284,                  // Integer: Speed of the transition, in milliseconds
           label: "Menu",                    // String: Label for the navigation toggle
@@ -230,13 +215,13 @@ var navigation = responsiveNav(".nc-nav-collapse", {
           this.wrapper = document.getElementById(this.wrapperEl);
 
         // If element with an ID doesn't exist, use querySelector
-      } else if (document.querySelector(this.wrapperEl)) {
-        this.wrapper = document.querySelector(this.wrapperEl);
+        } else if (document.querySelector(this.wrapperEl)) {
+          this.wrapper = document.querySelector(this.wrapperEl);
 
         // If element doesn't exists, stop here.
-      } else {
-        throw new Error("The nav element you are trying to select doesn't exist");
-      }
+        } else {
+          throw new Error("The nav element you are trying to select doesn't exist");
+        }
 
         // Inner wrapper
         this.wrapper.inner = getChildren(this.wrapper);
@@ -249,12 +234,12 @@ var navigation = responsiveNav(".nc-nav-collapse", {
         this._init(this);
       };
 
-      ResponsiveNav.prototype = {
+    ResponsiveNav.prototype = {
 
       /**
        * Unattaches events and removes any classes that were added
        */
-       destroy: function () {
+      destroy: function () {
         this._removeStyles();
         removeClass(nav, "closed");
         removeClass(nav, "opened");
@@ -283,7 +268,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Toggles the navigation open/close
        */
-       toggle: function () {
+      toggle: function () {
         if (hasAnimFinished === true) {
           if (!navOpen) {
             this.open();
@@ -296,7 +281,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Opens the navigation
        */
-       open: function () {
+      open: function () {
         if (!navOpen) {
           removeClass(nav, "closed");
           addClass(nav, "opened");
@@ -312,7 +297,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Closes the navigation
        */
-       close: function () {
+      close: function () {
         if (navOpen) {
           addClass(nav, "closed");
           removeClass(nav, "opened");
@@ -329,20 +314,20 @@ var navigation = responsiveNav(".nc-nav-collapse", {
             }, opts.transition + 10);
 
           // Animations aren't enabled, we can do these immediately
-        } else {
-          nav.style.position = "absolute";
-        }
+          } else {
+            nav.style.position = "absolute";
+          }
 
-        navOpen = false;
-        opts.close();
-      }
-    },
+          navOpen = false;
+          opts.close();
+        }
+      },
 
       /**
        * Resize is called on window resize and orientation change.
        * It initializes the CSS styles and height calculations.
        */
-       resize: function () {
+      resize: function () {
 
         // Resize watches navigation toggle's display state
         if (window.getComputedStyle(navToggle, null).getPropertyValue("display") !== "none") {
@@ -374,28 +359,28 @@ var navigation = responsiveNav(".nc-nav-collapse", {
        * @param  {event} event
        * @return {type} returns the type of event that should be used
        */
-       handleEvent: function (e) {
+      handleEvent: function (e) {
         var evt = e || window.event;
 
         switch (evt.type) {
-          case "touchstart":
+        case "touchstart":
           this._onTouchStart(evt);
           break;
-          case "touchmove":
+        case "touchmove":
           this._onTouchMove(evt);
           break;
-          case "touchend":
-          case "mouseup":
+        case "touchend":
+        case "mouseup":
           this._onTouchEnd(evt);
           break;
-          case "click":
+        case "click":
           this._preventDefault(evt);
           break;
-          case "keyup":
+        case "keyup":
           this._onKeyUp(evt);
           break;
-          case "focus":
-          case "resize":
+        case "focus":
+        case "resize":
           this.resize(evt);
           break;
         }
@@ -404,7 +389,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Initializes the widget
        */
-       _init: function () {
+      _init: function () {
         this.index = index++;
 
         addClass(nav, opts.navClass);
@@ -423,30 +408,30 @@ var navigation = responsiveNav(".nc-nav-collapse", {
          * so it's called here again on init to make sure all the
          * calculated styles are correct.
          */
-         var self = this;
-         setTimeout(function () {
+        var self = this;
+        setTimeout(function () {
           self.resize();
         }, 20);
 
-         addEvent(window, "resize", this, false);
-         addEvent(window, "focus", this, false);
-         addEvent(document.body, "touchmove", this, false);
-         addEvent(navToggle, "touchstart", this, false);
-         addEvent(navToggle, "touchend", this, false);
-         addEvent(navToggle, "mouseup", this, false);
-         addEvent(navToggle, "keyup", this, false);
-         addEvent(navToggle, "click", this, false);
+        addEvent(window, "resize", this, false);
+        addEvent(window, "focus", this, false);
+        addEvent(document.body, "touchmove", this, false);
+        addEvent(navToggle, "touchstart", this, false);
+        addEvent(navToggle, "touchend", this, false);
+        addEvent(navToggle, "mouseup", this, false);
+        addEvent(navToggle, "keyup", this, false);
+        addEvent(navToggle, "click", this, false);
 
         /**
          * Init callback here
          */
-         opts.init();
-       },
+        opts.init();
+      },
 
       /**
        * Creates Styles to the <head>
        */
-       _createStyles: function () {
+      _createStyles: function () {
         if (!styleElement.parentNode) {
           styleElement.type = "text/css";
           document.getElementsByTagName("head")[0].appendChild(styleElement);
@@ -456,7 +441,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Removes styles from the <head>
        */
-       _removeStyles: function () {
+      _removeStyles: function () {
         if (styleElement.parentNode) {
           styleElement.parentNode.removeChild(styleElement);
         }
@@ -465,7 +450,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Creates Navigation Toggle
        */
-       _createToggle: function () {
+      _createToggle: function () {
 
         // If there's no toggle, let's create one
         if (!opts.customToggle) {
@@ -486,26 +471,26 @@ var navigation = responsiveNav(".nc-nav-collapse", {
           navToggle = toggle;
 
         // There is a toggle already, let's use that one
-      } else {
-        var toggleEl = opts.customToggle.replace("#", "");
-
-        if (document.getElementById(toggleEl)) {
-          navToggle = document.getElementById(toggleEl);
-        } else if (document.querySelector(toggleEl)) {
-          navToggle = document.querySelector(toggleEl);
         } else {
-          throw new Error("The custom nav toggle you are trying to select doesn't exist");
+          var toggleEl = opts.customToggle.replace("#", "");
+
+          if (document.getElementById(toggleEl)) {
+            navToggle = document.getElementById(toggleEl);
+          } else if (document.querySelector(toggleEl)) {
+            navToggle = document.querySelector(toggleEl);
+          } else {
+            throw new Error("The custom nav toggle you are trying to select doesn't exist");
+          }
         }
-      }
-    },
+      },
 
       /**
        * Closes the navigation when a link inside is clicked.
        */
-       _closeOnNavClick: function () {
+      _closeOnNavClick: function () {
         if (opts.closeOnNavClick) {
           var links = nav.getElementsByTagName("a"),
-          self = this;
+            self = this;
           forEach(links, function (i, el) {
             addEvent(links[i], "click", function () {
               if (isMobile) {
@@ -521,7 +506,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
        *
        * @param  {event} event
        */
-       _preventDefault: function(e) {
+      _preventDefault: function(e) {
         if (e.preventDefault) {
           if (e.stopImmediatePropagation) {
             e.stopImmediatePropagation();
@@ -531,17 +516,17 @@ var navigation = responsiveNav(".nc-nav-collapse", {
           return false;
 
         // This is strictly for old IE
-      } else {
-        e.returnValue = false;
-      }
-    },
+        } else {
+          e.returnValue = false;
+        }
+      },
 
       /**
        * On touch start we get the location of the touch.
        *
        * @param  {event} event
        */
-       _onTouchStart: function (e) {
+      _onTouchStart: function (e) {
         if (!Event.prototype.stopImmediatePropagation) {
           this._preventDefault(e);
         }
@@ -553,27 +538,27 @@ var navigation = responsiveNav(".nc-nav-collapse", {
          * Remove mouseup event completely here to avoid
          * double triggering the event.
          */
-         removeEvent(navToggle, "mouseup", this, false);
-       },
+        removeEvent(navToggle, "mouseup", this, false);
+      },
 
       /**
        * Check if the user is scrolling instead of tapping.
        *
        * @param  {event} event
        */
-       _onTouchMove: function (e) {
+      _onTouchMove: function (e) {
         if (Math.abs(e.touches[0].clientX - this.startX) > 10 ||
-          Math.abs(e.touches[0].clientY - this.startY) > 10) {
+        Math.abs(e.touches[0].clientY - this.startY) > 10) {
           this.touchHasMoved = true;
-      }
-    },
+        }
+      },
 
       /**
        * On touch end toggle the navigation.
        *
        * @param  {event} event
        */
-       _onTouchEnd: function (e) {
+      _onTouchEnd: function (e) {
         this._preventDefault(e);
         if (!isMobile) {
           return;
@@ -588,8 +573,8 @@ var navigation = responsiveNav(".nc-nav-collapse", {
             return;
 
           // Event type was click, not touch
-        } else {
-          var evt = e || window.event;
+          } else {
+            var evt = e || window.event;
 
             // If it isn't a right click, do toggling
             if (!(evt.which === 3 || evt.button === 2)) {
@@ -605,7 +590,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
        *
        * @param  {event} event
        */
-       _onKeyUp: function (e) {
+      _onKeyUp: function (e) {
         var evt = e || window.event;
         if (evt.keyCode === 13) {
           this.toggle();
@@ -615,10 +600,10 @@ var navigation = responsiveNav(".nc-nav-collapse", {
       /**
        * Adds the needed CSS transitions if animations are enabled
        */
-       _transitions: function () {
+      _transitions: function () {
         if (opts.animate) {
           var objStyle = nav.style,
-          transition = "max-height " + opts.transition + "ms";
+            transition = "max-height " + opts.transition + "ms";
 
           objStyle.WebkitTransition =
           objStyle.MozTransition =
@@ -631,7 +616,7 @@ var navigation = responsiveNav(".nc-nav-collapse", {
        * Calculates the height of the navigation and then creates
        * styles which are later added to the page <head>
        */
-       _calcHeight: function () {
+      _calcHeight: function () {
         var savedHeight = 0;
         for (var i = 0; i < nav.inner.length; i++) {
           savedHeight += nav.inner[i].offsetHeight;
@@ -653,11 +638,11 @@ var navigation = responsiveNav(".nc-nav-collapse", {
     /**
      * Return new Responsive Nav
      */
-     return new ResponsiveNav(el, options);
+    return new ResponsiveNav(el, options);
 
-   };
+  };
 
-   if (typeof module !== "undefined" && module.exports) {
+  if (typeof module !== "undefined" && module.exports) {
     module.exports = responsiveNav;
   } else {
     window.responsiveNav = responsiveNav;

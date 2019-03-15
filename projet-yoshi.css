@@ -227,8 +227,7 @@ html.fp-enabled,
 }
 
 
-/*<----------------section-1----------------->*/
-
+/*<----------------fixedMenu----------------->*/
 
 @import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
 
@@ -244,6 +243,36 @@ body
     font-family: 'Catamaran', sans-serif;
     color: white;
 }
+
+.parPanneau
+{
+    text-align: center;
+    line-height: 69.5vh;
+    font-size: 3.4em;
+    font-weight: 900;
+    width: 36vh;
+    height: 45vh;
+    right: 10%;
+    background: url("media/panneau.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+.parPanneau:hover
+{
+    opacity: 0.7;
+}
+
+.parPanneau:active
+{
+    opacity: 0.4;
+}
+
+
+/*<----------------section-1----------------->*/
+
 
 .ktouch
 {
@@ -297,7 +326,7 @@ body
 #ktext
 {
     display: none;
-    font-size: 1.3em;
+    font-size: 1.6em;
     font-weight: 600;
     margin-left: 3vh;
 }
@@ -311,9 +340,9 @@ body
 {
     max-height: 100%;
     max-width: 100%;    
-    margin-left: -38%;
+    margin-left: -48%;
     opacity: 0;
-    transition: margin 1s linear, opacity 0.8s linear;
+    transition: margin 0.5s linear, opacity 0.8s linear;
     position: relative;
 }
 
@@ -340,7 +369,7 @@ button:focus
 
 .ktouch:hover .yo
 {
-    margin-left: -10%;
+    margin-left: -30%;
     opacity: 1;
 }
 
@@ -356,6 +385,32 @@ button:focus
     .cont button
     {
         max-width: 50.666667%;
+    }
+}
+@media screen and (min-width: 276px) and (max-width: 1100px)
+{
+    #ktext
+    {
+        font-size: 1.3em;
+    }
+
+    .yo
+    {
+        max-width: 50%;
+        height: 30%;
+    }
+
+    .ktouch:hover .yo
+    {
+        margin-left: -5%;
+    }
+
+    .parPanneau
+    {
+        width: 26vh;
+        height: 35vh;
+        line-height: 50vh;
+        font-size: 2em;
     }
 }
 
@@ -384,9 +439,10 @@ button:focus
 }
 
 .aintro-team {
-    margin-top: -365px;
+    margin-top: -345px;
     margin-bottom: -45px;
-    width: 40%;
+    padding-right: 2%;
+    width: 30%;
     background-color: rgba(255, 167, 52, 0.8);
     border-radius: 0 25px 25px 0;
 }
@@ -394,7 +450,7 @@ button:focus
 .aintro-team h1 {
     font-weight: 900;
     color: white;
-    margin-left: 40px;
+    text-align: right;
     font-size: 3.5em;
 }
 
@@ -407,14 +463,21 @@ button:focus
     perspective: 1000px;
 }
 
-.abg-flower {
-    background: url(https://i.postimg.cc/CLfPxcFQ/flower.png) no-repeat center center;
-    background-size: 63px 50px;
+.abg-flower{
+    background: url(https://i.postimg.cc/T2S8Lmfd/greg-Flower.png) no-repeat center center;
+    background-size: 63px 75px;
     position: absolute;
     width: 304px;
-    height: 173px;
-    top: -40px;
+    height: 10px;
+    padding-top: 20vh;
+    margin-top: 0vh;
     right: 8px;
+    transition: margin 0.8s linear;
+}
+
+.abg-flower:hover
+{
+    margin-top: -6vh;
 }
 
 .abg-brick {
@@ -422,8 +485,8 @@ button:focus
     background-size: 320px 60px;
     position: absolute;
     width: 379px;
-    height: 173px;
-    top: 14px;
+    height: 63px;
+    top: 134px;
     right: -30px;
 }
 
@@ -799,6 +862,7 @@ img.zoom {
     background-image: url(https://www.desktopbackground.org/download/1280x1024/2010/07/08/45265_yoshi-wallpapers-by-prodigy-invader-on-deviantart_1920x1080_h.png);
     border-radius: 30px;
     box-shadow: 10px 10px 30px grey;
+    text-align: center;
     text-shadow: 1px 1px 2px black;
 }
 
