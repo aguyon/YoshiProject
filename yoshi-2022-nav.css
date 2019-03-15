@@ -54,7 +54,7 @@ body {
   font-family: 'Catamaran', arial, helvetica;
   font-weight: 700;
   font-size: 1em;
-  float: right;
+  float: left;
 }
 
 .nc-nav-collapse,
@@ -64,11 +64,11 @@ body {
   display: block;
   list-style: none;
   width: 100%;
-  float: right;
+  float: left;
 }
 
 .nc-nav-collapse li {
-  float: right;
+  float: left;
   width: 100%;
   display: block;
 }
@@ -88,13 +88,13 @@ body {
   background: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid white;
   padding: 0.7em 1em;
-  float: right;
+  float: left;
 }
 @media screen and (min-width: 576px) {
   .nc-nav-collapse a {
     margin: 0;
     padding: 1em;
-    float: right;
+    float: left;
     text-align: center;
     border-bottom: 0;
     border-right: 1px solid white;

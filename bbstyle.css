@@ -14,6 +14,7 @@
 
 #bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
 	text-align: center;
+	overflow: hidden;
 }
 
 #bbtextpage1, #bbtextpage2 {
@@ -24,11 +25,15 @@
 	margin-top: -25px;
 }
 
+#bbcard1, #bbcard2, #bbcard3 {
+	margin-top: 15px;
+}
 
 /* Egg animation --------------------*/
 
 .eggimg {
 	margin-left: 20px;
+	margin-bottom: 100px;
 }
 
 .egg {
@@ -99,7 +104,7 @@
 		width: 200px;
 		height: 250px;
 		margin-left: 100px;
-		margin-bottom: 20px;
+		margin-bottom: 100px;
 	}
 	#bbcard1, #bbcard2, #bbcard3 {
 		display: none;
@@ -149,8 +154,12 @@
 /* text animation ---------------*/
 
 #titremeeting {
-	display: inline-block;
-	line-height: 1em;
-	margin-top: 20px;
-	color: green;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  margin-top: 20px;
+}
+
+#titremeeting.word {
+  display: inline-block;
+  line-height: 1em;
 }

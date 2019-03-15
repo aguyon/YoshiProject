@@ -106,4 +106,3 @@ function activateCheats() {
   alert('Ne votez pas Bowser !')
 
 }
-
