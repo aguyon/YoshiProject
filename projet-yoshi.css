@@ -257,6 +257,7 @@ body
     background-size: contain;
     position: absolute;
     z-index: 2;
+    color: white;
 }
 
 .parPanneau:hover
@@ -469,14 +470,14 @@ button:focus
     width: 304px;
     height: 10px;
     padding-top: 20vh;
-    margin-top: 5vh;
+    margin-top: -1vh;
     right: 8px;
     transition: margin 0.8s linear;
 }
 
 .abg-flower:hover
 {
-    margin-top: -1vh;
+    margin-top: -6vh;
 }
 
 .abg-brick {
