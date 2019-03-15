@@ -32,20 +32,39 @@
 
 		
 	<div class="container-fluid nc-fixed">
-		<div class="row">
-			<div class="col-12 col-sm-2 nc-fond">
-				<a href="#"><img src="media/yoshi-2022-500px.png" class="nc-logo"></a>
-			</div>
-			<nav class="col-12 col-sm-10 nc-nav-collapse">
-				<ul>
-					<li><a href="#equipe">Equipe</a></li>
-					<li><a href="#programme">Programme</a></li>
-					<li><a href="#quiz">Quiz</a></li>
-					<li><a href="#boutique">Boutique</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-12 col-sm-2 nc-fond">
+                <a href="#"><img src="media/yoshi-2022-500px.png" class="nc-logo"></a>
+            </div>
+            <nav class="col-12 col-sm-10 nc-nav-collapse">
+              <ul>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#boutique">Boutique</a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+    <script>
+      var navigation = responsiveNav(".nc-nav-collapse", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 284,                  // Integer: Speed of the transition, in milliseconds
+        label: "Menu",                    // String: Label for the navigation toggle
+        insert: "after",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nc-nav-collapse",      // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "nc-js",                 // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+      });
+    </script>
+    
+    
 	<div id="fullpage">
 
 
