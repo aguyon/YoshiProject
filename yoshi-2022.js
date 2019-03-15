@@ -102,7 +102,7 @@
 		function drawLineCanvas() 
 		{
 			var minimumLineWidth = 25;
-			var maximumLineWidth = 100;
+			var maximumLineWidth = 200;
 			var lineWidthRange = maximumLineWidth - minimumLineWidth;
 			var maximumSpeed = 50;
 

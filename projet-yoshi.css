@@ -227,8 +227,7 @@ html.fp-enabled,
 }
 
 
-/*<----------------section-1----------------->*/
-
+/*<----------------fixedMenu----------------->*/
 
 @import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
 
@@ -244,6 +243,24 @@ body
     font-family: 'Catamaran', sans-serif;
     color: white;
 }
+
+.parPanneau
+{
+    height: 20vh;
+    width: 20vh;
+}
+
+.lol
+{
+    margin-top: 20vh;
+    z-index: 1;
+    height: 20vh;
+    width: 20vh;
+}
+
+
+/*<----------------section-1----------------->*/
+
 
 .ktouch
 {
@@ -297,7 +314,7 @@ body
 #ktext
 {
     display: none;
-    font-size: 1.3em;
+    font-size: 1.6em;
     font-weight: 600;
     margin-left: 3vh;
 }
@@ -311,9 +328,9 @@ body
 {
     max-height: 100%;
     max-width: 100%;    
-    margin-left: -38%;
+    margin-left: -48%;
     opacity: 0;
-    transition: margin 1s linear, opacity 0.8s linear;
+    transition: margin 0.5s linear, opacity 0.8s linear;
     position: relative;
 }
 
@@ -340,7 +357,7 @@ button:focus
 
 .ktouch:hover .yo
 {
-    margin-left: -10%;
+    margin-left: -30%;
     opacity: 1;
 }
 
@@ -384,9 +401,10 @@ button:focus
 }
 
 .aintro-team {
-    margin-top: -365px;
+    margin-top: -345px;
     margin-bottom: -45px;
-    width: 40%;
+    padding-right: 2%;
+    width: 30%;
     background-color: rgba(255, 167, 52, 0.8);
     border-radius: 0 25px 25px 0;
 }
@@ -394,7 +412,7 @@ button:focus
 .aintro-team h1 {
     font-weight: 900;
     color: white;
-    margin-left: 40px;
+    text-align: right;
     font-size: 3.5em;
 }
 
@@ -412,9 +430,16 @@ button:focus
     background-size: 63px 50px;
     position: absolute;
     width: 304px;
-    height: 173px;
-    top: -40px;
+    height: 10px;
+    padding-top: 20vh;
+    margin-top: -5vh;
     right: 8px;
+    transition: margin 0.5s linear;
+}
+
+.abg-flower:hover
+{
+    margin-top: -8vh;
 }
 
 .abg-brick {
@@ -422,8 +447,8 @@ button:focus
     background-size: 320px 60px;
     position: absolute;
     width: 379px;
-    height: 173px;
-    top: 14px;
+    height: 63px;
+    top: 134px;
     right: -30px;
 }
 
