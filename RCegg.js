@@ -22,23 +22,23 @@ document.getElementById("eggCrackID").addEventListener('click', function(event) 
 
 });
 
-/*let count3 = 0;
+let count3 = 0;
 document.getElementById("eggOpenID").addEventListener('click', function(event) {
     count3++
-    if (count3 == 3) {
+    if (count3 == 2) {
         document.getElementById("eggYoshiID").style.display = 'inline';
         document.getElementById("eggOpenID").style.display = 'none';
-        const audio = new Audio('media/yoshi-sound-2.mp3');
+        const audio = new Audio('media/yoshi-sound-1.mp3');
 			audio.play();
         }
-});*/
+});
 
 document.getElementById("RCmorty").addEventListener('keypress', function(event) {
     
   count = 0
   count2 = 0
   count3 = 0
-  document.getElementById("eggOpenID").style.display = 'none';
+  document.getElementById("eggYoshiID").style.display = 'none';
   document.getElementById("eggID").style.display = 'inline';
   const audio = new Audio('media/agg.mp3');
   audio.play();
@@ -51,7 +51,9 @@ document.getElementById("RCmorty").addEventListener('mouseover', function(event)
     count = 0
     count2 = 0
     count3 = 0
+    document.getElementById("eggCrackID").style.display = 'none';
     document.getElementById("eggOpenID").style.display = 'none';
+    document.getElementById("eggYoshiID").style.display = 'none';
     document.getElementById("eggID").style.display = 'inline';
     const audio = new Audio('media/agg.mp3');
     audio.play();
@@ -98,16 +100,10 @@ document.addEventListener('keydown', function(e) {
 });
 
 function activateCheats() {
-  document.getElementById("eggOpenID").style.display = 'none';
-  document.getElementById("eggID").style.display = 'inline';
 
-  var audio = new Audio('media/applause.mp3');
+  const audio = new Audio('media/applause.mp3');
   audio.play();
+  alert('Ne votez pas Bowser !')
 
-  alert("cheats activated");
 }
 
-/*
-event.stopPropagation();
-event.preventDefault();
-*/

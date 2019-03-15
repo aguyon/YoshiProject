@@ -54,6 +54,11 @@
 	display: none;
 }
 
+#eggYoshiID {
+	display: none;
+}
+
+
 
 @keyframes egganim {
 	0% { transform: rotateZ( 0deg ); }
