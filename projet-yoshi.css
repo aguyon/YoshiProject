@@ -256,7 +256,7 @@ body
     background: url("media/panneau.png") no-repeat;
     background-size: contain;
     position: absolute;
-    z-index: 2;
+    z-index: 11;
     color: white;
 }
 
@@ -268,6 +268,93 @@ body
 .parPanneau:active
 {
     opacity: 0.4;
+}
+
+/* Modal ------------- */
+.amodal {
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.amodal-content {
+    background-color: transparent;
+    margin: 5% auto;
+    padding: 20px;
+    width: 68%;
+}
+
+.amodal-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 40;    
+}
+
+#avote { 
+    font-size: 3em;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+#acountDrop { 
+    font-size: 1.8em;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+/* Close Button ------------- */
+.acloseBtn {
+    color: #FFF;
+    float: left;
+    font-size: 35px;
+}
+
+.acloseBtn:hover, .acloseBtn:focus {
+    color: #ED4324;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa {
+    font-size: 60px !important;
+    margin-left: 80px;
+    position: absolute;
+}
+
+/* Drag and Drop ------------- */
+#adrop {
+    background: url(https://i.postimg.cc/Hnj21BLf/urne.png) no-repeat center center;
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+}
+
+#adrag {
+    width: 130px;
+    height: 260px;
+    position: absolute;
+    left: 330px;
+}
+
+#anewImgDD {
+    display: none;
+    width: 498px;
+    height: 524px;
+    margin-top: -10px;
 }
 
 
@@ -470,14 +557,14 @@ button:focus
     width: 304px;
     height: 10px;
     padding-top: 20vh;
-    margin-top: -1vh;
+    margin-top: 4vh;
     right: 8px;
     transition: margin 0.8s linear;
 }
 
 .abg-flower:hover
 {
-    margin-top: -6vh;
+    margin-top: -2vh;
 }
 
 .abg-brick {
@@ -486,7 +573,7 @@ button:focus
     position: absolute;
     width: 379px;
     height: 63px;
-    top: 134px;
+    top: 16vh;
     right: -30px;
 }
 
