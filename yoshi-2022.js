@@ -191,7 +191,8 @@
 			}
 		}
 
-				// Get modal element
+		/* Modal ---------------------- */
+		// Get modal element
 		const modal = document.getElementById('amyModal');
 
 		// Get open modal button
@@ -232,13 +233,11 @@
 		    ev.dataTransfer.setData("text", ev.target.id);
 		}
 
-		let countVote = 0
 		function drop(ev) {
 		    ev.preventDefault();
 		    var data = ev.dataTransfer.getData("text");
 		    ev.target.appendChild(document.getElementById(data));
-		    countVote++;
-		    document.getElementById("avote").innerHTML = ('Yoshi te remercie !');
+		    document.getElementById("avote").innerHTML = ('Merci !');
 		}
 
 		document.getElementById('adrag').addEventListener('mouseout', function(event){
