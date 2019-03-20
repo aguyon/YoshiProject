@@ -86,10 +86,17 @@ body {
   width: 100%;
   height: 60px;
   background: rgba(0, 0, 0, 0.5);
+  transition: background 0.2s linear;
   border-bottom: 1px solid white;
   padding: 0.7em 1em;
   float: left;
 }
+
+.nc-nav-collapse a:hover
+{
+    background: rgba(0, 0, 0, 0.7);
+}
+
 @media screen and (min-width: 576px) {
   .nc-nav-collapse a {
     margin: 0;

@@ -17,7 +17,16 @@
 
 		/*-------------------script-section-1----------------------*/
 
-
+		function upThePanneau()
+		{
+			let up2 = document.getElementById("kpopup");
+			up2.style.marginTop = "0vh";
+		}
+		function downThePanneau()
+		{
+			let up2 = document.getElementById("kpopup");
+			up2.style.marginTop = "-50vh";
+		}
 		var image = document.getElementById('kbg2');
 		var imageCanvas = document.createElement('canvas');
 		var imageCanvasContext = imageCanvas.getContext('2d');

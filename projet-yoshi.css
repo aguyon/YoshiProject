@@ -229,7 +229,9 @@ html.fp-enabled,
 
 /*<----------------fixedMenu----------------->*/
 
+
 @import url('https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900');
+
 
 *
 {
@@ -246,9 +248,10 @@ body
 
 .parPanneau
 {
+    margin-top: -50vh;
     text-align: center;
-    line-height: 69.5vh;
-    font-size: 3.4em;
+    line-height: 68vh;
+    font-size: 3em;
     font-weight: 900;
     width: 36vh;
     height: 45vh;
@@ -258,16 +261,20 @@ body
     position: absolute;
     z-index: 2;
     color: white;
+    transition: transform 1s linear;
+    text-shadow: 0 0 0.5vh black;
+
 }
 
 .parPanneau:hover
 {
-    opacity: 0.7;
+    font-size: 3.8em;
+    transform: rotate(3deg);
 }
 
 .parPanneau:active
 {
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 
