@@ -52,7 +52,7 @@ html.fp-enabled,
     position: absolute;
     z-index: 4;
     top: 50%;
-    cursor: url("media/cursor.png"); pointer;
+    cursor: url("media/cursor.png") pointer;
     width: 0;
     height: 0;
     border-style: solid;
@@ -727,7 +727,7 @@ button:focus
 .next, .prev {
     position: absolute;
     top: 235px;
-    cursor: url("media/cursor.png"); pointer;
+    cursor: url("media/cursor.png") pointer;
     color: #fff;
     width: 120px;
     height: 120px;
@@ -949,6 +949,7 @@ img.zoom {
     background-image: url(https://www.desktopbackground.org/download/1280x1024/2010/07/08/45265_yoshi-wallpapers-by-prodigy-invader-on-deviantart_1920x1080_h.png);
     border-radius: 30px;
     box-shadow: 10px 10px 30px grey;
+    text-align: center;
     text-shadow: 1px 1px 2px black;
 }
 
