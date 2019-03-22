@@ -286,7 +286,7 @@ body
 
 .amodal-content {
     background-color: transparent;
-    margin: 5% auto;
+    margin: 8% auto;
     padding: 20px;
     width: 68%;
 }
@@ -347,7 +347,7 @@ body
     width: 130px;
     height: 260px;
     position: absolute;
-    left: 120px;
+    left: 8%;
 }
 
 #anewImgDD {
@@ -355,6 +355,69 @@ body
     width: 498px;
     height: 524px;
     margin-top: -10px;
+}
+
+@media screen and (min-width: 847px) and (max-width: 1206px) {
+    .amodal-content {
+        width: 100%;
+        margin: 16% -8%;
+    }
+    #adrag {
+        left: 85%;
+        top: 30%;
+    }
+    .fa {
+        left: 15%;
+    }
+}
+
+@media screen and (min-width: 630px) and (max-width: 846px) {
+    .amodal-content {
+        width: 100%;
+        margin: 28% -8%;
+    }
+    #adrag {
+        left: 85%;
+        top: 30%;
+    }
+    #avote {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 630px) {
+    .amodal-content {
+        width: 100%;
+        margin: 38% -8%;
+    }
+    #adrag {
+        left: 81%;
+        top: 30%;
+    }
+    #avote {
+        display: none;
+    }
+    .fa {
+        margin-top: -45px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .amodal-content {
+        width: 114%;
+        margin: 60% -8%;
+    }
+    #adrag {
+        left: 71%;
+        top: 41%;
+    }
+    #avote {
+        display: none;
+    }
+    .fa {
+        margin-top: -47px;
+        margin-left: 42px;
+    }
 }
 
 
