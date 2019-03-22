@@ -90,7 +90,7 @@
 	98% { transform: rotateZ( 0deg ); }
 }
 
-@media(max-width:576px){
+@media(max-width:992px){
 	#bbtextpage1, #bbtextpage11, #bbtextpage2, #bbtextpage22 {
 		font-size: 1em;
 		text-align: center;

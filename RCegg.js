@@ -112,7 +112,7 @@ function activateCheats() {
   //const audio = new Audio('media/applause.mp3');
   //audio.play();
   //alert('https://odyssey.wildcodeschool.com/')
-  window.open("https://www.linkedin.com/in/grpetit/");
+  window.open("https://jeancarrillo.github.io/PimpMyYoshi/");
 
 }
 
