@@ -1,3 +1,11 @@
+document.getElementById("abrick").addEventListener('mouseover', function(event) {
+  document.getElementById("aflower").style.transform = 'translateY(-65px)';
+});
+
+document.getElementById("abrick").addEventListener('mouseout', function(event) {
+  document.getElementById("aflower").style.transform = 'translateY(0px)';
+});
+
 
 let count = 0;
 document.getElementById("eggID").addEventListener('click', function(event) {
@@ -101,8 +109,13 @@ document.addEventListener('keydown', function(e) {
 
 function activateCheats() {
 
-  const audio = new Audio('media/applause.mp3');
-  audio.play();
-  alert('Ne votez pas Bowser !')
+  //const audio = new Audio('media/applause.mp3');
+  //audio.play();
+  //alert('https://odyssey.wildcodeschool.com/')
+  window.open("https://jeancarrillo.github.io/PimpMyYoshi/");
 
 }
+
+document.getElementById("abrick").addEventListener('mouseout', function(event) {
+  document.getElementById("aflower").style.transform = 'translateY(0px)';
+});

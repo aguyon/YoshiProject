@@ -1,7 +1,7 @@
 
 		var myFullpage = new fullpage('#fullpage', {
 			anchors: ['yoshi2022', 'equipe', 'programme', 'quiz', 'boutique'],
-			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B'],
+			sectionsColor: ['#24A908', '#24A908', '#24A908', '#24A908', '#24A908'],
 			navigation: false,
 			recordHistory: false,
 			fadingEffect:'section',
@@ -16,7 +16,17 @@
 
 
 		/*-------------------script-section-1----------------------*/
-
+		function upThePanneau()
+		{
+			let up2 = document.getElementById("kpopup");
+			up2.style.marginTop = "0vh";
+			up2.style.transition = "margin 2s ease-in-out 0s";
+		}
+		function downThePanneau()
+		{
+			let up2 = document.getElementById("kpopup");
+			up2.style.marginTop = "-50vh";
+		}
 
 		var image = document.getElementById('kbg2');
 		var imageCanvas = document.createElement('canvas');
@@ -190,6 +200,61 @@
 				up.style.marginTop = "0vh";							
 			}
 		}
+
+		/* Modal ---------------------- */
+		// Get modal element
+		const modal = document.getElementById('amyModal');
+
+		// Get open modal button
+		const openBtn = document.getElementById('kpopup');
+
+		// Get close button
+		const closeBtn = document.getElementsByClassName('acloseBtn')[0];
+
+		// Function to open modal
+		const openModal = () => { modal.style.display = 'block' };
+
+		// Function to close modal
+		const closeModal = () => { modal.style.display = 'none' };
+
+		// Function to close modal if outside click
+		function outsideClick(e) {
+		    if (e.target == modal) {
+		        modal.style.display = 'none';
+		    }
+		}
+
+		// Listen for open click
+		openBtn.addEventListener('click', openModal);
+
+		// Listen for close click
+		closeBtn.addEventListener('click', closeModal);
+
+		// Listen for outside click
+		window.addEventListener('click', outsideClick)
+
+
+		// Drag and Drop
+		function allowDrop(ev) {
+		    ev.preventDefault();
+		}
+		  
+		function drag(ev) {
+		    ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+		    ev.preventDefault();
+		    var data = ev.dataTransfer.getData("text");
+		    ev.target.appendChild(document.getElementById(data));
+		    document.getElementById("avote").innerHTML = ('Merci !');
+		}
+
+		document.getElementById('adrag').addEventListener('mouseout', function(event){
+		    document.getElementById('anewImgDD').style.display = 'inline';
+		    document.getElementById("adrop").style.display = 'none';
+		    document.getElementById("adrag").style.display = 'none';
+		});
 
 
 		/*-------------------script-section-2----------------------*/

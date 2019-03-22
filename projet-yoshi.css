@@ -52,7 +52,7 @@ html.fp-enabled,
     position: absolute;
     z-index: 4;
     top: 50%;
-    cursor: url("media/cursor.png"); pointer;
+    cursor: url("media/cursor.png") pointer;
     width: 0;
     height: 0;
     border-style: solid;
@@ -62,15 +62,68 @@ html.fp-enabled,
     transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    left: 24px;
+    width: 130px;
+    height: 163px;
+    background-image: url("media/arrows-left.png");
+    background-size: contain;
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    right: 24px;
+    width: 130px;
+    height: 163px;
+    background-image: url("media/arrows-right.png");
+    background-size: contain;
+}
+.fp-controlArrow.fp-prev:hover {
+    background-image: url("media/arrows-left-hover.png");
+}
+.fp-controlArrow.fp-next:hover {
+    background-image: url("media/arrows-right-hover.png");
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .fp-controlArrow.fp-prev {
+        left: 24px;
+        width: 80px;
+        height: 100px;
+        background-image: url("media/arrows-left.png");
+        background-size: contain;
+    }
+    .fp-controlArrow.fp-next {
+        right: 24px;
+        width: 80px;
+        height: 100px;
+        background-image: url("media/arrows-right.png");
+        background-size: contain;
+    }
+    .fp-controlArrow.fp-prev:hover {
+        background-image: url("media/arrows-left-hover.png");
+    }
+    .fp-controlArrow.fp-next:hover {
+        background-image: url("media/arrows-right-hover.png");
+    }
+}
+@media screen and (max-width: 575px) {
+    .fp-controlArrow.fp-prev {
+        left: 12px;
+        width: 50px;
+        height: 63px;
+        background-image: url("media/arrows-left.png");
+        background-size: contain;
+    }
+    .fp-controlArrow.fp-next {
+        right: 12px;
+        width: 50px;
+        height: 63px;
+        background-image: url("media/arrows-right.png");
+        background-size: contain;
+    }
+    .fp-controlArrow.fp-prev:hover {
+        background-image: url("media/arrows-left-hover.png");
+    }
+    .fp-controlArrow.fp-next:hover {
+        background-image: url("media/arrows-right-hover.png");
+    }
 }
 .fp-scrollable {
     overflow: hidden;
@@ -248,7 +301,7 @@ body
 {
     text-align: center;
     line-height: 69.5vh;
-    font-size: 3.4em;
+    font-size: 3.3em;
     font-weight: 900;
     width: 36vh;
     height: 45vh;
@@ -256,18 +309,168 @@ body
     background: url("media/panneau.png") no-repeat;
     background-size: contain;
     position: absolute;
-    z-index: 2;
+    z-index: 11;
     color: white;
+    text-shadow: 0 0 0.5vh black;
 }
 
 .parPanneau:hover
 {
-    opacity: 0.7;
+    font-size: 3.6em; 
 }
 
 .parPanneau:active
 {
-    opacity: 0.4;
+    opacity: 0.8;
+}
+
+/* Modal ------------- */
+.amodal {
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.amodal-content {
+    background-color: transparent;
+    margin: 8% auto;
+    padding: 20px;
+    width: 68%;
+}
+
+.amodal-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 40;    
+}
+
+#avote { 
+    font-size: 3em;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+#acountDrop { 
+    font-size: 1.8em;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+/* Close Button ------------- */
+.acloseBtn {
+    color: #FFF;
+    float: left;
+    font-size: 35px;
+}
+
+.acloseBtn:hover, .acloseBtn:focus {
+    color: #ED4324;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa {
+    font-size: 60px !important;
+    margin-left: 80px;
+    position: absolute;
+}
+
+/* Drag and Drop ------------- */
+#adrop {
+    background: url(https://i.postimg.cc/Hnj21BLf/urne.png) no-repeat center center;
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    text-align: center;
+}
+
+#adrag {
+    width: 130px;
+    height: 260px;
+    position: absolute;
+    left: 8%;
+}
+
+#anewImgDD {
+    display: none;
+    width: 498px;
+    height: 524px;
+    margin-top: -10px;
+}
+
+@media screen and (min-width: 847px) and (max-width: 1206px) {
+    .amodal-content {
+        width: 100%;
+        margin: 16% -8%;
+    }
+    #adrag {
+        left: 85%;
+        top: 30%;
+    }
+    .fa {
+        left: 15%;
+    }
+}
+
+@media screen and (min-width: 630px) and (max-width: 846px) {
+    .amodal-content {
+        width: 100%;
+        margin: 28% -8%;
+    }
+    #adrag {
+        left: 85%;
+        top: 30%;
+    }
+    #avote {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 630px) {
+    .amodal-content {
+        width: 100%;
+        margin: 38% -8%;
+    }
+    #adrag {
+        left: 81%;
+        top: 30%;
+    }
+    #avote {
+        display: none;
+    }
+    .fa {
+        margin-top: -45px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .parPanneau {
+        display: none;
+    }
+    #adrag {
+        left: 71%;
+        top: 41%;
+    }
+    #avote {
+        display: none;
+    }
+    .fa {
+        margin-top: -47px;
+        margin-left: 42px;
+    }
 }
 
 
@@ -463,31 +666,21 @@ button:focus
     perspective: 1000px;
 }
 
-.abg-flower{
-    background: url(https://i.postimg.cc/T2S8Lmfd/greg-Flower.png) no-repeat center center;
-    background-size: 63px 75px;
+
+#aflower {
     position: absolute;
-    width: 304px;
-    height: 10px;
-    padding-top: 20vh;
-    margin-top: 0vh;
-    right: 8px;
-    transition: margin 0.8s linear;
+    width: 50px;
+    right: 108px;
+    top: 195px;
+    transition-duration: .8s;
 }
 
-.abg-flower:hover
-{
-    margin-top: -6vh;
-}
 
-.abg-brick {
-    background: url(https://i.postimg.cc/CxGcjdnC/brick.png) no-repeat center center;
-    background-size: 320px 60px;
+#abrick {
     position: absolute;
-    width: 379px;
-    height: 63px;
-    top: 134px;
-    right: -30px;
+    width: 350px;
+    right: 30px;
+    top: 200px;
 }
 
 .acarousel {
@@ -640,7 +833,7 @@ button:focus
 .next, .prev {
     position: absolute;
     top: 235px;
-    cursor: url("media/cursor.png"); pointer;
+    cursor: url("media/cursor.png") pointer;
     color: #fff;
     width: 120px;
     height: 120px;
@@ -783,201 +976,6 @@ button:focus
 
 
 /*<----------------section-5---------------->*/
-
-
-#section5{
-    position: absolute;
-    background: url("https://images6.alphacoders.com/332/332872.png") no-repeat;
-}
-
-.fp-sr-only{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-.ymgreen{
-    background-color:#6fb936;
-    border-radius: 30px;
-    margin-top: -20px;
-}
-
-.ymorange{
-    background-color: orange;
-    border-radius: 30px;
-}
-
-.ymblue{
-    background-color: lightskyblue;
-    border-radius: 30px;
-}
-
-.ymrow
-{
-    flex-wrap: nowrap;
-}
-
-.thumb{
-  margin-bottom: 40px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  text-align: center;
-  font-family: "Catamaran", serif;
-  transition-duration: 0.2s; 
-}
-
-.ymgreen{
-  margin-top:50px;
-
-}
-
-img.zoom {
-  width: 80%;
-  height: 230px;
-  border-radius:30px;
-  object-fit:cover;
-  transition: all .3s ease-in-out;
-}
-
-.thumb:hover {
-    transform: scale(1.25);
-    font-size: 20px;
-    transition-duration: 0.2s; 
-}
-
-.money-color {
-    color: #ff471a;
-}
-
-#ymtitregalerie {
-    color: white;
-    font-size: 40px;
-    background-image: url(https://www.desktopbackground.org/download/1280x1024/2010/07/08/45265_yoshi-wallpapers-by-prodigy-invader-on-deviantart_1920x1080_h.png);
-    border-radius: 30px;
-    box-shadow: 10px 10px 30px grey;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-}
-
-.ym_textmenu
-{
-    text-decoration: none;
-    color: #232323;
-    transition: color 0.3s ease;
-}
-
-#menuToggle
-{
-    margin-top: -5vh;
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-#menuToggle input
-{
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-    -webkit-touch-callout: none;
-}
-
-
-#menuToggle span
-{
-    display: block;
-    width: 40px;
-    height: 6px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #ffffff;
-    border-radius: 15px;
-    z-index: 1;
-    
-    transform-origin: 4px 0px;
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-    transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span
-{
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu
-{
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    color: black;
-    background-image: url(https://www.desktopbackground.org/download/1280x1024/2010/07/08/45265_yoshi-wallpapers-by-prodigy-invader-on-deviantart_1920x1080_h.png);
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    border-radius: 30px;
-    font-family: "Catamaran", serif;
-    font-style: bold;
-    font-size: 24px;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-    padding: 12px 0;
-    font-size: 30px;
-    color: black;
-    text-shadow: 1px 1px 2px whitesmoke;
-}
-
-#menuToggle input:checked ~ ul
-{
-    transform: none;
-}
 
 
 /*<----------------section-end---------------->*/

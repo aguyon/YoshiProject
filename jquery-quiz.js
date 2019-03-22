@@ -197,9 +197,10 @@
         $('#quiz-next-btn').hide();
         $('#quiz-restart-btn').show();
         $(resultsScreen).show();
+        
         var resultsStr = base.options.resultsFormat.replace('%score', score).replace('%total', numQuestions);
         $('#quiz-results').html(resultsStr);
-
+        
         if (typeof base.options.finishCallback === 'function') {
           base.options.finishCallback();
         }
@@ -253,12 +254,15 @@
     startButton: '#quiz-start-btn',
     homeButton: '#quiz-home-btn',
     resultsScreen: '#quiz-results-screen',
-    resultsFormat: 'Tu as %score sur %total !',
+    resultsFormat: 'Tu as %score sur %total ! <br/>↑ ↑ ↓ ↓ ← → ← → B A',
     gameOverScreen: '#quiz-gameover-screen',
     nextButtonText: 'Suivant',
     finishButtonText: 'Terminé',
     restartButtonText: 'Recommencer'
+    //konamiCode: '↑ ↑ ↓ ↓ ← → ← → B A'
   };
+
+
 
   $.fn.quiz = function(options) {
     return this.each(function() {
