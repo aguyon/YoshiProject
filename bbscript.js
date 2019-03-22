@@ -20,8 +20,15 @@ anime.timeline({loop: true})
 
 // button //
 
-const mapbutton = document.getElementById("bigmapbutton")
+$(document).ready(function(){
+	$('.ouvrir-modal').click(function(){
+    $('#bbModal').modal('show');
+  });
+    $("#bbModal").on('hidden.bs.modal', function(){
+		alert("Merci pour votre participation ! Yoshi a hâte de vous rencontrer !");
+	});
+});
 
-const openbutton = () => {top.location.href="https://www.google.com/maps/d/u/0/viewer?mid=192M6t3LffQyZpKAUdXm01ddGeqgF6y9y&ll=52.80640147441079%2C10.685783677490463&z=5"};
-
-bigmapbutton.addEventListener('click', openbutton);
+$('#bbModal').on('shown.bs.modal', function () {
+  $('#bbModal').trigger('focus')
+})

@@ -143,3 +143,19 @@
 	background-color: green;
 	color: #fff;
 }
+
+/* Modal -----------------*/
+
+#bbModal {
+	position: absolute;
+}
+
+#bbregisterbutton {
+	color: green;
+	background: transparent;
+}
+
+#bbclosebutton {
+	color: red;
+	background: transparent;
+}
