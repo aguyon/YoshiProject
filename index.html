@@ -12,61 +12,111 @@
 	<title>Yoshi 2022</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<meta name="Resource-type" content="Document" />
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="projet-yoshi.css" />
 	<link rel="stylesheet" type="text/css" href="RCcustom.css" />
 	<link rel="stylesheet" type="text/css" href="bbstyle.css" />
 	<link rel="stylesheet" type="text/css" href="RCquiz.css" />
-	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet"> 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="NCshop.css" />
+	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="yoshi-2022-nav.css">
 	<script src="yoshi-2022-nav.js"></script>
 </head>
+
 <body>
+<!-- Modal Benoît -->
+<div class="modal fade" id="bbModal" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title" id="bbModalLabel">M'enregistrer dans un Meeting !</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"
+				id="bbclosebtn">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="modal-body">
+			<form>
+				<div class="form-group">
+					<label for="exampleFormControlInput1">Email address</label>
+					<input type="email" class="form-control" id="exampleFormControlInput1"
+						placeholder="name@example.com">
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlInput2">NOM & Prénom</label>
+					<input type="email" class="form-control" id="exampleFormControlInput2"
+						placeholder="PETIT Grégory">
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect1">Quel est la raison de ma présence</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>Je veux rencontrer Yoshi</option>
+						<option>Je souhaite devenir adhérent</option>
+						<option>J'aimerai participer bénévolement à la campagne de Yoshi</option>
+						<option>Autre</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Commentaires</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1"
+						rows="3"></textarea>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn" data-dismiss="modal" id="bbclosebutton"><b>Fermer</b></button>
+			<button type="button" class="btn" data-dismiss="modal" id="bbregisterbutton"><b>M'enregistrer</b></button>
+		</div>
+	</div>
+</div>
+</div>
+	<!------------------------header------------------------>
 
-		<!------------------------header------------------------>	
 
-		
 	<div class="container-fluid nc-fixed">
-        <div class="row">
-            <div class="col-12 col-sm-2 nc-fond">
-                <a href="#"><img src="media/yoshi-2022-500px.png" class="nc-logo"></a>
-            </div>
-            <nav class="col-12 col-sm-10 nc-nav-collapse">
-              <ul>
-                <li><a href="#equipe">Equipe</a></li>
-                <li><a href="#programme">Programme</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-                <li><a href="#boutique">Boutique</a></li>
-              </ul>
-            </nav>
-        </div>
-    </div>
-    <script>
-      var navigation = responsiveNav(".nc-nav-collapse", {
-        animate: true,                    // Boolean: Use CSS3 transitions, true or false
-        transition: 284,                  // Integer: Speed of the transition, in milliseconds
-        label: "Menu",                    // String: Label for the navigation toggle
-        insert: "after",                  // String: Insert the toggle before or after the navigation
-        customToggle: "",                 // Selector: Specify the ID of a custom toggle
-        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
-        openPos: "relative",              // String: Position of the opened nav, relative or static
-        navClass: "nc-nav-collapse",      // String: Default CSS class. If changed, you need to edit the CSS too!
-        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
-        jsClass: "nc-js",                 // String: 'JS enabled' class which is added to <html> element
-        init: function(){},               // Function: Init callback
-        open: function(){},               // Function: Open callback
-        close: function(){}               // Function: Close callback
-      });
-    </script>
-    
-    
+		<div class="row">
+			<div class="col-12 col-sm-2 nc-fond">
+				<a href="#yoshi2022"><img src="media/yoshi-2022-500px.png" class="nc-logo"></a>
+			</div>
+			<nav class="col-12 col-sm-10 nc-nav-collapse">
+				<ul>
+					<li><a href="#equipe">Equipe</a></li>
+					<li><a href="#programme">Programme</a></li>
+					<li><a href="#quiz">Quiz</a></li>
+					<li><a href="#boutique">Boutique</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<script>
+		var navigation = responsiveNav(".nc-nav-collapse", {
+			animate: true,                    // Boolean: Use CSS3 transitions, true or false
+			transition: 284,                  // Integer: Speed of the transition, in milliseconds
+			label: "Menu",                    // String: Label for the navigation toggle
+			insert: "after",                  // String: Insert the toggle before or after the navigation
+			customToggle: "",                 // Selector: Specify the ID of a custom toggle
+			closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+			openPos: "relative",              // String: Position of the opened nav, relative or static
+			navClass: "nc-nav-collapse",      // String: Default CSS class. If changed, you need to edit the CSS too!
+			navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+			jsClass: "nc-js",                 // String: 'JS enabled' class which is added to <html> element
+			init: function () { },               // Function: Init callback
+			open: function () { },               // Function: Open callback
+			close: function () { }               // Function: Close callback
+		});
+	</script>
+
+
 	<div id="fullpage">
 
 
@@ -76,29 +126,35 @@
 		<div onmouseover="upThePanneau();" onmouseleave="downThePanneau();" class="section" id="section1">
 			<div class="parPanneau" id="kpopup">Voter</div>
 			<div id="amyModal" class="amodal">
-		        <div class="bounceIn amodal-content animated">
-		            <span class="acloseBtn"><i class="fa fa-close"></i></span>
+				<div class="bounceIn amodal-content animated">
+					<span class="acloseBtn"><i class="fa fa-close"></i></span>
 
-		            <h1 id="avote">Vote pour Yoshi !</h1>
-	                <div id="adrop" src="" ondrop="drop(event)" ondragover="allowDrop(event)">
-	                <img id="adrag" src="https://i.postimg.cc/fLvSxp5Y/card.png" draggable="true" ondragstart="drag(event)"></div>
-	                <img id="anewImgDD" src="https://i.postimg.cc/mrMJLfy3/urne2.png">
-		            <p id="acountDrop"></p>       
-		        </div>
-		    </div>
-		    <div class="amodal-overlay"></div>
+					<h1 id="avote">Vote pour Yoshi !</h1>
+					<div id="adrop" src="" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img id="adrag" src="https://i.postimg.cc/fLvSxp5Y/card.png" draggable="true"
+							ondragstart="drag(event)">
+					</div>
+					<img id="anewImgDD" src="https://i.postimg.cc/bN9Brh4P/urne3.png">
+					<p id="acountDrop"></p>
+				</div>
+			</div>
+			<div class="amodal-overlay"></div>
 			<div id="itouch" class="ktouch">
 				<div class="kbg"><img id="kbg2" src="media/kbg2.jpg"></div>
 				<div class="container-fluid align-items-end cont">
 					<section class="row kyoshi justify-content-center ro">
-						<img class="col-md-3 col-sm-6 col-9 yo" src="https://mario.nintendo.com/assets/img/characters/char-yoshi.png">
+						<img class="col-md-3 col-sm-6 col-9 yo"
+							src="https://mario.nintendo.com/assets/img/characters/char-yoshi.png">
 						<div id="kinfo" class="col-md-4 col-sm-6 row justify-content-center flex-wrap yo2">
 							<h2 class="col-md-9 col-sm-9 col-12 align-self-end text-center">Yoshi</h2>
-							<button type="button" onclick="upTheTitle();" class="col-md-5 col-sm-5 col-4 align-self-start bg-transparent text-light">More &#160;<img id="karrow" src="https://mario.nintendo.com/assets/img//characters/arrow.svg"></button>
+							<button type="button" onclick="upTheTitle();"
+								class="col-md-5 col-sm-5 col-4 align-self-start bg-transparent text-light">More
+								&#160;<img id="karrow"
+									src="https://mario.nintendo.com/assets/img//characters/arrow.svg"></button>
 							<span id="ktext">C'est moi Yoshi ! Votez pour moi et vous n'aurez plus jamais faim !
-							Quand l'appetit va tout va, les soucis dans l'assiette, la vie .. une omelette.</span>
-						</div> 
-						<div class="col-md-12 kfooter"></div>			
+								Quand l'appetit va tout va, les soucis dans l'assiette, la vie .. une omelette.</span>
+						</div>
+						<div class="col-md-12 kfooter"></div>
 					</section>
 				</div>
 			</div>
@@ -111,10 +167,10 @@
 			<div class="slide aslide2-1" id="slide2-1">
 				<div class="intro aintro-team"></div>
 				<div class="container acontainer">
-					<div class="abg-flower"></div>
-					<div class="abg-brick"></div>
+					<div class="abg-flower"><img src="https://i.postimg.cc/T2S8Lmfd/greg-Flower.png" alt="" id="aflower"></div>
+					<div class="abg-brick"><img src="https://i.postimg.cc/CxGcjdnC/brick.png" alt="" id="abrick"></div>
 					<div class="awrapper">
-						<div class="row arow">					
+						<div class="row arow">
 							<div class="carousel acarousel">
 								<div class="col-md-4">
 									<div class="aa">
@@ -122,10 +178,15 @@
 											<div class="card acard">
 												<div class="pattern-mario red border aborder">
 													<div class="icon-holder aicon-holder">
-														<img src="https://mario.nintendo.com/assets/img/characters/char-mario.png" alt="" class="icon aicon">
+														<img src="https://mario.nintendo.com/assets/img/characters/char-mario.png"
+															alt="" class="icon aicon">
 													</div>
 													<h4 class="heading aheading">Mario</h4>
-													<p class="description adescription"><span style="font-weight:bold">Directeur de Campagne</span>, Mario gère tous les personnages travaillant pour notre futur président... Yoshi !</p>
+													<p class="description adescription"><span
+															style="font-weight:bold">Directeur de
+															Campagne</span>, Mario gère tous les personnages travaillant
+														pour notre futur président...
+														Yoshi !</p>
 												</div>
 											</div>
 										</div>
@@ -137,10 +198,15 @@
 											<div class="card acard">
 												<div class="pattern-peach orange border aborder">
 													<div class="icon-holder aicon-holder">
-														<img src="https://mario.nintendo.com/assets/img/characters/char-peach.png" alt="" class="icon aicon">
+														<img src="https://mario.nintendo.com/assets/img/characters/char-peach.png"
+															alt="" class="icon aicon">
 													</div>
 													<h4 class="heading aheading">Peach</h4>
-													<p class="description adescription"><span style="font-weight:bold">Chargée de la Communication</span>, Peach doit faire connaître Yoshi au monde entier.<br> Une rôle très important !</p>
+													<p class="description adescription"><span
+															style="font-weight:bold">Chargée de la
+															Communication</span>, Peach doit faire connaître Yoshi au
+														monde entier.<br> Une rôle très
+														important !</p>
 												</div>
 											</div>
 										</div>
@@ -152,10 +218,15 @@
 											<div class="card acard">
 												<div class="pattern-daisy pink border aborder">
 													<div class="icon-holder aicon-holder">
-														<img src="https://mario.nintendo.com/assets/img/characters/char-daisy.png" alt="" class="icon aicon">
+														<img src="https://mario.nintendo.com/assets/img/characters/char-daisy.png"
+															alt="" class="icon aicon">
 													</div>
 													<h4 class="heading aheading">Daisy</h4>
-													<p class="description adescription"><span style="font-weight:bold">Porte Parole de Yoshi</span>, Daisy est chargée de diffuser ces idées au grand public quand il n'a pas la possibilité de le faire.</p>
+													<p class="description adescription"><span
+															style="font-weight:bold">Porte Parole de
+															Yoshi</span>, Daisy est chargée de diffuser ces idées au
+														grand public quand il n'a pas la
+														possibilité de le faire.</p>
 												</div>
 											</div>
 										</div>
@@ -167,10 +238,15 @@
 											<div class="card acard">
 												<div class="pattern-luigi green border aborder">
 													<div class="icon-holder aicon-holder">
-														<img src="https://mario.nintendo.com/assets/img/characters/char-luigi.png" alt="" class="icon aicon">
+														<img src="https://mario.nintendo.com/assets/img/characters/char-luigi.png"
+															alt="" class="icon aicon">
 													</div>
 													<h4 class="heading aheading">Luigi</h4>
-													<p class="description adescription"><span style="font-weight:bold">Conseiller Technique</span>, Luigi est là pour superviser les travaux de Yoshi Island.<br>La plomberie n'a aucun secret pour lui !</p>
+													<p class="description adescription"><span
+															style="font-weight:bold">Conseiller
+															Technique</span>, Luigi est là pour superviser les travaux
+														de Yoshi Island.<br>La
+														plomberie n'a aucun secret pour lui !</p>
 												</div>
 											</div>
 										</div>
@@ -182,10 +258,15 @@
 											<div class="card acard">
 												<div class="pattern-toad blue border aborder">
 													<div class="icon-holder aicon-holder">
-														<img src="https://mario.nintendo.com/assets/img/characters/char-toad.png" alt="" class="icon aicon">
+														<img src="https://mario.nintendo.com/assets/img/characters/char-toad.png"
+															alt="" class="icon aicon">
 													</div>
 													<h4 class="heading aheading">Toad</h4>
-													<p class="description adescription"><span style="font-weight:bold">Militant</span>, Toad est très impliqué dans la campagne de Yoshi. Son rôle est de donner envie à la population de voter pour lui.<br>Et il y arrive très bien !</p>
+													<p class="description adescription"><span
+															style="font-weight:bold">Militant</span>, Toad est
+														très impliqué dans la campagne de Yoshi. Son rôle est de donner
+														envie à la population de
+														voter pour lui.<br>Et il y arrive très bien !</p>
 												</div>
 											</div>
 										</div>
@@ -197,10 +278,15 @@
 											<div class="card acard">
 												<div class="pattern-waluigi violet border aborder">
 													<div class="icon-holder icon-waluigi aicon-holder aicon-waluigi">
-														<img src="https://mario.nintendo.com/assets/img/characters/char-waluigi.png" alt="" class="icon aicon">
+														<img src="https://mario.nintendo.com/assets/img/characters/char-waluigi.png"
+															alt="" class="icon aicon">
 													</div>
 													<h4 class="heading aheading">Waluigi</h4>
-													<p class="description adescription"><span style="font-weight:bold">Journaliste</span>, Waluigi accompagne Yoshi lors de ses déplacements pour raconter ce qui se passe, poser des questions...</p>
+													<p class="description adescription"><span
+															style="font-weight:bold">Journaliste</span>, Waluigi
+														accompagne Yoshi lors de ses déplacements pour raconter ce qui
+														se passe, poser des
+														questions...</p>
 												</div>
 											</div>
 										</div>
@@ -216,14 +302,14 @@
 								<i class="fas fa-hand-point-right fa-5x next"></i>
 							</div>
 						</div>
-					</div>					
+					</div>
 				</div>
 				<div class="pattern-leaves"></div>
 				<div class="equipe-campagne">
 					<img src="https://i.postimg.cc/kgm0r0xc/equipe-campagne.png">
 				</div>
 				<div class="pattern-leaves-3d"></div>
-			</div>						
+			</div>
 		</div>
 
 
@@ -237,7 +323,14 @@
 						<div class="row align-items-center">
 							<div class="col-sm">
 								<h2 id=bbtextpage1><b>Un programme tout n'oeuf !</b></h2>
-								<h4 id="bbtextpage11"> Anciennement fidèle destrier d'un modeste plombier, je me présente à vous aujourd'hui afin de devenir votre nouveau Président ! Durant mon quinquennat, je souhaite que mon monde soit en harmonie avec le votre. D'autres dinosaures vont tentés de se présenter à vous, pour votre propre sécurité, je vous conseil de ne pas voter pour tout ce qui crache du feu ! </h4>
+								<h4 id="bbtextpage11"> Anciennement fidèle destrier d'un modeste plombier, je me
+									présente à vous
+									aujourd'hui afin de devenir votre nouveau Président ! Durant mon quinquennat, je
+									souhaite que mon
+									monde soit en harmonie avec le votre. D'autres dinosaures vont tentés de se
+									présenter à vous, pour
+									votre propre sécurité, je vous conseil de ne pas voter pour tout ce qui crache du
+									feu ! </h4>
 							</div>
 							<div class="col-sm">
 								<div class="egg">
@@ -249,7 +342,13 @@
 							</div>
 							<div class="col-sm">
 								<h2 id=bbtextpage2><b>Mais qu'est-ce qu'il y a dans ce programme ?</b></h2>
-								<h4 id=bbtextpage22> Dans cet oeuf se cache la solution à tout vos problèmes. Je ne l'ouvrirai que lorsque je serai élu. Sachez que c'est encore plus impressionnant que Mario et son étoile ! Un flot de bonheur et de joie se déversera dans votre monde et partagera ainsi l'ambiance que mon monde possède. Voilà voilà, ici faudra mettre la suite du texte quoi.</h4>
+								<h4 id=bbtextpage22> Dans cet oeuf se cache la solution à tout vos problèmes. Je ne
+									l'ouvrirai que
+									lorsque je serai élu. Sachez que c'est encore plus impressionnant que Mario et son
+									étoile ! Un flot de
+									bonheur et de joie se déversera dans votre monde et partagera ainsi l'ambiance que
+									mon monde possède.
+									Voilà voilà, ici faudra mettre la suite du texte quoi.</h4>
 							</div>
 						</div>
 					</div>
@@ -268,21 +367,29 @@
 							<div class="card card-body mb-3" id="bbcard1">
 								<div class="media d-block d-sm-flex">
 									<img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="media/yoshibomb.png"
-									alt="warningbomb" id="bbyoshibomb">
+										alt="warningbomb" id="bbyoshibomb">
 									<div class="media-body text-center text-md-left ml-md-3 ml-0">
-										<p>Attention ! Les autres candidats peuvent-vous mentir quand à leurs attentions. Ne gobez pas n'importe quoi ! Yoshi veuillera à vous révéler la vérité, il vous sera fidèle !</p>
+										<p>Attention ! Les autres candidats peuvent-vous mentir quand à leurs
+											attentions. Ne gobez pas
+											n'importe quoi ! Yoshi veuillera à vous révéler la vérité, il vous sera
+											fidèle !</p>
 									</div>
 								</div>
 							</div>
-								<!--/.Panel-->
+							<!--/.Panel-->
 
 							<!--Panel-->
 							<div class="card card-body mb-3" id="bbcard2">
 								<div class="media d-block d-sm-flex">
 									<div class="media-body pr-md-3 pr-0 text-center text-md-left">
-										<p>Grâce aux pouvoirs du champignon rouge, notre monde grandira, littéralement, vers un avenir meilleur. Je rendrai également légale toute les drogues provenant de mon monde afin que tout le monde puisse en profiter en toute liberté.</p>
+										<p>Grâce aux pouvoirs du champignon rouge, notre monde grandira, littéralement,
+											vers un avenir
+											meilleur. Je rendrai également légale toute les drogues provenant de mon
+											monde afin que tout le
+											monde puisse en profiter en toute liberté.</p>
 									</div>
-									<img class="d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto" src="media/bbchampignon.png" width="150" height="150" alt="powerupmushroom" id="bbyoshichampignon">
+									<img class="d-flex mr-3 avatar-2 mt-md-0 mt-3 mx-auto" src="media/bbchampignon.png"
+										width="150" height="150" alt="powerupmushroom" id="bbyoshichampignon">
 								</div>
 							</div>
 							<!--/.Panel-->
@@ -290,9 +397,14 @@
 							<!--Panel-->
 							<div class="card card-body" id="bbcard3">
 								<div class="media d-block d-sm-flex">
-									<img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="media/bbgreenturtle.png" alt="greenturtle" width="150" height="150" id="bbgreenturtle">
+									<img class="d-flex avatar-2 mb-md-0 mb-3 mx-auto" src="media/bbgreenturtle.png"
+										alt="greenturtle" width="150" height="150" id="bbgreenturtle">
 									<div class="media-body text-center text-md-left ml-md-3 ml-0">
-										<p>Je vais introduire un nouveau mode de transport totalement écolo et énergie-free. Il suffit de se poser sur votre tortue, verte pour les courtes distances, rouges pour les longues et bleu avec les ailes pour voler au-dessus des océans.</p>
+										<p>Je vais introduire un nouveau mode de transport totalement écolo et
+											énergie-free. Il suffit de se
+											poser sur votre tortue, verte pour les courtes distances, rouges pour les
+											longues et bleu avec les
+											ailes pour voler au-dessus des océans.</p>
 									</div>
 								</div>
 							</div>
@@ -314,19 +426,25 @@
 								<div class="card-body" id="bbcard4">
 									<div class="media d-block d-md-flex mt-md-0 mt-4 mb-4">
 										<div class="media-body ml-md-3 ml-0">
-											<iframe src="https://www.google.com/maps/d/embed?mid=192M6t3LffQyZpKAUdXm01ddGeqgF6y9y" width="96%" height="313px" id="bbgooglemap"></iframe>
+											<iframe
+												src="https://www.google.com/maps/d/embed?mid=192M6t3LffQyZpKAUdXm01ddGeqgF6y9y"
+												width="96%" height="313px" id="bbgooglemap"></iframe>
 										</div>
 									</div>
 
 									<div class="media d-block d-md-flex">
 										<div class="media-body mr-md-3 mr-0">
-											<p align="justify">Participe et découvre ton futur président lors de l'un de ses meetings !</p>
+											<p align="justify">Participe et découvre ton futur président lors de l'un de
+												ses meetings !</p>
 											<div class="text-center text-md-left">
-												<button type="button" class="btn btn-indigo btn-rounded btn-md" id="bigmapbutton" target="_blank">Participez !</button>
+												<button type="button"
+													class="btn btn-indigo btn-rounded btn-md btn-primary ouvrir-modal"
+													id="bigmapbutton">Participez !</button>
 											</div>
 										</div>
-										<img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto" src="media/bbyoshimap.png"
-										alt="Yoshimeetingmap" id="bbyoshimap" width="30%" height="30%">
+										<img class="d-flex mr-3 mb-md-0 mb-3 mt-md-0 mt-4 avatar-2 rounded-circle z-depth-1 mx-auto"
+											src="media/bbyoshimap.png" alt="Yoshimeetingmap" id="bbyoshimap" width="30%"
+											height="30%">
 									</div>
 								</div>
 							</div>
@@ -342,7 +460,7 @@
 
 
 		<!------------------------section-4------------------>
-		<div class="section" id="section4">	
+		<div class="section" id="section4">
 			<div class="col-12 justify-content-center">
 				<div id="quiz2">
 					<div id="quiz-start-screen">
@@ -372,192 +490,108 @@
 
 
 		<div class="section" id="section5">
-			<div class="slide" id="slide5-1">
-				<div class="intro ymintro">
-					<div class="container page-top ymgreen">
-						<div id="ymtitregalerie">La collection de mug</div>
-						<div class="row justify-content-center ymrow">					
-							<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-								<img  src="media/mug1.jpg" class="zoom img-fluid "  alt="mug">
-								<span class="popuptext" id="myPopup" style="visibility: hidden">
-									<div class="">Mug "Japan edition"<br> <span class="money-color">350</span> coins</div>
-								</span>
-							</div>
+                
+                <div class="row body-shop">
+                    <div class="col-12 col-sm-6 col-lg-3 p-3">
+                        <div class="card card-shop">
+                          <img class="card-img-top" src="media/mug6.jpg" alt="Card image cap">
+                          <div class="card-body ">
+                            <a href="#" class="title-shop">Mug Yoshi pixel</a>
+                            <p class="card-text">En achetant ce mug, vous soutenez l'action politique de Yoshi. De plus votre café aura meilleur goût !</p>
+                            <a href="#" class="title-shop">22 €</a>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 p-3">
+                        <div class="card card-shop">
+                          <img class="card-img-top" src="media/mug-logo.png" alt="Card image cap">
+                          <div class="card-body">
+                            <a href="#" class="title-shop">Mug Yoshi 2022, vert</a>
+                            <p class="card-text">En achetant ce mug, vous soutenez l'action politique de Yoshi. De plus votre café aura meilleur goût !</p>
+                            <a href="#" class="title-shop">22 €</a>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 p-3">
+                        <div class="card card-shop">
+                          <img class="card-img-top" src="media/mug-logo-blue.png" alt="Card image cap">
+                          <div class="card-body">
+                            <a href="#" class="title-shop">Mug Yoshi 2022, bleu</a>
+                            <p class="card-text">En achetant ce mug, vous soutenez l'action politique de Yoshi. De plus votre café aura meilleur goût !</p>
+                            <a href="#" class="title-shop">22 €</a>
+                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 p-3">
+                        <div class="card card-shop">
+                          <img class="card-img-top" src="media/mug-logo-red.png" alt="Card image cap">
+                          <div class="card-body">
+                            <a href="#" class="title-shop">Mug Yoshi 2022, rouge</a>
+                            <p class="card-text">En achetant ce mug, vous soutenez l'action politique de Yoshi. De plus votre café aura meilleur goût !</p>
+                            <a href="#" class="title-shop">22 €</a>
+                          </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
 
-							<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-								<img  src="media/mug2.jpg" class="zoom img-fluid"  alt="mug2">
-								<span class="popuptext" id="myPopup" style="visibility: hidden">
-									<div class="">Mug "Yoshi family" <br> <span class="money-color">250</span> coins</div>
-								</span>
-							</div>
-						</div>   
-
-
-
-						<div class="row justify-content-center ymrow">   
-
-							<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-								<img  src="media/mug4.jpg" class="zoom img-fluid "  alt="mug4">
-								<span class="popuptext" id="myPopup" style="visibility: hidden">
-									<div class="">Mug "Big green"<br> <span class="money-color">350</span> coins</div>
-								</span>
-							</div>
-
-
-							<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-								<img  src="media/mug5.jpg" class="zoom img-fluid "  alt="mug5">
-								<span class="popuptext" id="myPopup" style="visibility: hidden">
-									<div class="">Mug "Togepi egg" <br> <span class="money-color">300</span> coins</div>
-								</span>
-							</div>
-
-						</div>
-
-					</div>
-
-
-				</div>
-			</div>
-			<div class="slide" id="slide5-2">
-
-				<div class="container page-top ymorange">
-					<div id="ymtitregalerie">Vetements et costumes</div>
-
-					<div class="row ymrow">
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/clothes.jpg" class="zoom img-fluid "  alt="clothes">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="">Sweater "Christmas Yoshi"<br> <span class="money-color">1200</span> coins</div>
-							</span>
-						</div>
-
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/clothes2.jpg" class="zoom img-fluid"  alt="clothes2">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="">"Grey shirt"<br> <span class="money-color">700</span> coins</div>
-							</span>
-						</div>
-
-					</div>   
-
-
-					<div class="row ymrow">   
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/clothes4.jpg" class="zoom img-fluid "  alt="clothes4">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="">Cap "Happy Yoshi"<br> <span class="money-color">600</span> coins</div>
-							</span>
-						</div>
-
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/clothes5.jpg" class="zoom img-fluid "  alt="clothes5">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="text-price">Costume "Be Yoshi"<br> <span class="money-color">1100</span> coins</div>
-							</span>
-						</div>
-
-
-					</div>
-
-				</div>
-
-
-			</div>
-			<div class="slide" id="slide5-3">
-
-				<div class="container page-top ymblue">
-					<div id="ymtitregalerie">Accessoires et autres</div>
-
-
-					<div class="row justify-content-center ymrow">
-
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/others.jpg" class="zoom img-fluid "  alt="others">
-							<span class="popuptext" id="myPopup" style="visibility: hidden"> 
-								<div class="">"Keys holder" <br> <span class="money-color">75</span> coins</div>
-							</span>
-						</div>
-
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/others2.jpg" class="zoom img-fluid"  alt="others2">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="">"USB disk 2Go" <br> <span class="money-color">250</span> coins</div>
-							</span>
-						</div>
-					</div>
-
-					<div class="row justify-content-center ymrow">
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/others3.jpg" class="zoom img-fluid "  alt="others3">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="">"Egg purse" <br> <span class="money-color">250</span> coins</div>
-							</span>
-						</div>     
-
-						<div class="col-lg-4 col-md-4 col-xs-6 thumb popup" onmouseover="displaypopup(this)" onmouseout="hidepopup(this)">
-							<img  src="media/others4.jpg" class="zoom img-fluid "  alt="others4">
-							<span class="popuptext" id="myPopup" style="visibility: hidden">
-								<div class="">"Post-it block"<br> <span class="money-color">100</span> coins</div>
-							</span>
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>
+        </div>
 
 
 			<!----------------------fin-section------------------------->
 
 
-		<!----------------------fin-section------------------------->
+			<!----------------------fin-section------------------------->
 
 		</div>
 		<script>
 			function displaypopup(e) {
 				console.log(e)
-				e.querySelector('#myPopup').style.visibility='visible'
-//   var popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
-}
-function hidepopup(e) {
-	console.log(e)
-	e.querySelector('#myPopup').style.visibility='hidden'
-//   var popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
-}
-</script>
-<script type="text/javascript">
-	var myFullpage = new fullpage('#fullpage', {
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
-		sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B'],
-		navigation: false,
-		recordHistory: false,
-		fadingEffect:'section',
-		navigationPosition: 'right',
-		navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-		responsiveWidth: 900,
-		afterResponsive: function(isResponsive){
+				e.querySelector('#myPopup').style.visibility = 'visible'
+				//   var popup = document.getElementById("myPopup");
+				//   popup.classList.toggle("show");
+			}
+			function hidepopup(e) {
+				console.log(e)
+				e.querySelector('#myPopup').style.visibility = 'hidden'
+				//   var popup = document.getElementById("myPopup");
+				//   popup.classList.toggle("show");
+			}
+		</script>
+		<script type="text/javascript">
+			var myFullpage = new fullpage('#fullpage', {
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+				sectionsColor: ['#24A908', '#24A908', '#24A908', '#24A908', '#24A908'],
+				navigation: false,
+				recordHistory: false,
+				fadingEffect: 'section',
+				navigationPosition: 'right',
+				navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+				responsiveWidth: 900,
+				afterResponsive: function (isResponsive) {
 
-		}
-	});
-</script>
-<script type="text/javascript" src="fullpage.js"></script>
-<script type="text/javascript" src="examples.js"></script>
-<script type="text/javascript" src="RCcustom.js"></script>
-<script type="text/javascript" src="bbscript.js"></script>
-<script type="text/javascript" src="RCegg.js"></script>
-<script type="text/javascript" src="yoshi-2022.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+				}
+			});
+		</script>
+		<script type="text/javascript" src="fullpage.js"></script>
+		<script type="text/javascript" src="examples.js"></script>
+		<script type="text/javascript" src="RCcustom.js"></script>
+		<script type="text/javascript" src="bbscript.js"></script>
+		<script type="text/javascript" src="RCegg.js"></script>
+		<script type="text/javascript" src="yoshi-2022.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
 </body>
+
 </html>

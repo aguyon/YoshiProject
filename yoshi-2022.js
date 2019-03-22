@@ -1,7 +1,7 @@
 
 		var myFullpage = new fullpage('#fullpage', {
 			anchors: ['yoshi2022', 'equipe', 'programme', 'quiz', 'boutique'],
-			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B'],
+			sectionsColor: ['#24A908', '#24A908', '#24A908', '#24A908', '#24A908'],
 			navigation: false,
 			recordHistory: false,
 			fadingEffect:'section',
@@ -16,7 +16,6 @@
 
 
 		/*-------------------script-section-1----------------------*/
-
 		function upThePanneau()
 		{
 			let up2 = document.getElementById("kpopup");
@@ -28,7 +27,7 @@
 			let up2 = document.getElementById("kpopup");
 			up2.style.marginTop = "-50vh";
 		}
-		
+
 		var image = document.getElementById('kbg2');
 		var imageCanvas = document.createElement('canvas');
 		var imageCanvasContext = imageCanvas.getContext('2d');

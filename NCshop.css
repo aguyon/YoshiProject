@@ -1,0 +1,28 @@
+.body-shop {
+    margin: 6em 2em 2em 2em;
+    height: 2000px;
+    font-family: 'Catamaran', arial, helvetica;
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .body-shop {
+        margin: 2em 2em 2em 2em;
+        height: 1000px;
+        font-family: 'Catamaran', arial, helvetica;
+    }   
+}
+
+.title-shop {
+    color: #F8D294;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.title-shop:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.card-shop {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
