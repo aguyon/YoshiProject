@@ -254,11 +254,12 @@
     startButton: '#quiz-start-btn',
     homeButton: '#quiz-home-btn',
     resultsScreen: '#quiz-results-screen',
-    resultsFormat: 'Tu as %score sur %total !',
+    resultsFormat: 'Tu as %score sur %total ! <br/>↑ ↑ ↓ ↓ ← → ← → B A',
     gameOverScreen: '#quiz-gameover-screen',
     nextButtonText: 'Suivant',
     finishButtonText: 'Terminé',
     restartButtonText: 'Recommencer'
+    //konamiCode: '↑ ↑ ↓ ↓ ← → ← → B A'
   };
 
 

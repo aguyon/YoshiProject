@@ -109,16 +109,12 @@ document.addEventListener('keydown', function(e) {
 
 function activateCheats() {
 
-  const audio = new Audio('media/applause.mp3');
-  audio.play();
-  alert('Ne votez pas Bowser !')
+  //const audio = new Audio('media/applause.mp3');
+  //audio.play();
+  //alert('https://odyssey.wildcodeschool.com/')
+  window.open("https://www.linkedin.com/in/grpetit/");
 
 }
-
-// if (document.getElementById("quiz-results") == 'Tu as 4 sur 4 !') {
-//   console.log('bonjour')
-//   document.getElementById("quiz-results").innerHTML = ('Essayez le KONAMI Code');
-// };
 
 document.getElementById("abrick").addEventListener('mouseout', function(event) {
   document.getElementById("aflower").style.transform = 'translateY(0px)';
