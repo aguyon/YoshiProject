@@ -1,7 +1,7 @@
 
 		var myFullpage = new fullpage('#fullpage', {
 			anchors: ['yoshi2022', 'equipe', 'programme', 'quiz', 'boutique'],
-			sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B'],
+			sectionsColor: ['#24A908', '#24A908', '#24A908', '#24A908', '#24A908'],
 			navigation: false,
 			recordHistory: false,
 			fadingEffect:'section',
