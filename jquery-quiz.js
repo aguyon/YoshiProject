@@ -197,9 +197,10 @@
         $('#quiz-next-btn').hide();
         $('#quiz-restart-btn').show();
         $(resultsScreen).show();
+        
         var resultsStr = base.options.resultsFormat.replace('%score', score).replace('%total', numQuestions);
         $('#quiz-results').html(resultsStr);
-
+        
         if (typeof base.options.finishCallback === 'function') {
           base.options.finishCallback();
         }
@@ -259,6 +260,8 @@
     finishButtonText: 'Terminé',
     restartButtonText: 'Recommencer'
   };
+
+
 
   $.fn.quiz = function(options) {
     return this.each(function() {

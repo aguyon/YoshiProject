@@ -1,3 +1,11 @@
+document.getElementById("abrick").addEventListener('mouseover', function(event) {
+  document.getElementById("aflower").style.transform = 'translateY(-65px)';
+});
+
+document.getElementById("abrick").addEventListener('mouseout', function(event) {
+  document.getElementById("aflower").style.transform = 'translateY(0px)';
+});
+
 
 let count = 0;
 document.getElementById("eggID").addEventListener('click', function(event) {
@@ -106,3 +114,12 @@ function activateCheats() {
   alert('Ne votez pas Bowser !')
 
 }
+
+// if (document.getElementById("quiz-results") == 'Tu as 4 sur 4 !') {
+//   console.log('bonjour')
+//   document.getElementById("quiz-results").innerHTML = ('Essayez le KONAMI Code');
+// };
+
+document.getElementById("abrick").addEventListener('mouseout', function(event) {
+  document.getElementById("aflower").style.transform = 'translateY(0px)';
+});

@@ -613,31 +613,21 @@ button:focus
     perspective: 1000px;
 }
 
-.abg-flower{
-    background: url(https://i.postimg.cc/T2S8Lmfd/greg-Flower.png) no-repeat center center;
-    background-size: 63px 75px;
+
+#aflower {
     position: absolute;
-    width: 304px;
-    height: 10px;
-    padding-top: 20vh;
-    margin-top: 4vh;
-    right: 8px;
-    transition: margin 0.8s linear;
+    width: 50px;
+    right: 108px;
+    top: 195px;
+    transition-duration: .8s;
 }
 
-.abg-flower:hover
-{
-    margin-top: -2vh;
-}
 
-.abg-brick {
-    background: url(https://i.postimg.cc/CxGcjdnC/brick.png) no-repeat center center;
-    background-size: 320px 60px;
+#abrick {
     position: absolute;
-    width: 379px;
-    height: 63px;
-    top: 16vh;
-    right: -30px;
+    width: 350px;
+    right: 30px;
+    top: 200px;
 }
 
 .acarousel {
