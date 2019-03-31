@@ -1,7 +1,7 @@
-## Site web du futur Président Yoshi !
+# Site web du futur Président Yoshi !
   Réalisé lors du projet numéro 1 à la Wild Code School
   
-# Cahier des charges
+## Cahier des charges
   * Sujet sur Yoshi
   * Responsive
   * Dynamique
